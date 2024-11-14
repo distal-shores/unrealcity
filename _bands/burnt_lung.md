@@ -12,8 +12,7 @@ bandcamp: burntlung
 
 Doom/Stoner metal three-piece Burnt Lung comes out of a whirlwind of 2024 performances with a killer self-titled EP. 
 
-“Their blend of heavy riffs and socially conscious lyrics, addressing issues like LGBTQ+ rights and social injustice, creates an intense and provocative sonic experience. The EP reflects both personal struggles and political messages, making it a significant entry into the modern punk scene.” 
-
-– Jason Crews, Infraredmag.com 
+“A really awesome mix of metal styles, classic, doom, stoner and some sludge as well. Excellent songs that keep my head banging. Super fuzzy guitars in front of pounding drums…the semi harsh vocals are perfect for the mix. This is not for the faint of heart. BURNT LUNG, more please!!!”
+~ S Patrick Brooks (The Heavy Underground Farm Report, Outlaws of the Sun)
 
 Expect plenty of bong riffs and all the "gnarly metallic stoner goodness" that is Burnt Lung. IOW, don't Sleep on 'em.
