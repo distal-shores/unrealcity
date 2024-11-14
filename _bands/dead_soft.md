@@ -8,4 +8,4 @@ img: dead_soft
 headliner: true
 ---
 
-Gabriola Island three-piece Dead Soft paints a picture of life in the Pacific Northwest with fever dream visions, super saturated riffs, soaring, hooky choruses and heartfelt angst. With their hotly anticipated third album due imminently on their Westerly imprint, the Softies are assured to build on the now-legendary status of their self-titled debut (2014) and knockout sophomore <em>Big Blue</em> (2019). 
+Gabriola Island three-piece Dead Soft paints a picture of life in the Pacific Northwest with fever dream visions, super saturated riffs, soaring, hooky choruses and heartfelt angst. With their hotly anticipated third album due imminently on their Westerly imprint, the Softies are assured to build on the now-legendary status of their self-titled debut (2014) and knockout sophomore <span style="font-style:italic">Big Blue</span> (2019). 
