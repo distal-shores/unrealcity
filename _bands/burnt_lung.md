@@ -5,6 +5,9 @@ members: ["Harry Bruyneel (vocals, guitar)", "Aaron Winrob (bass)", "Solomon Kau
 genres: ["doom metal","stoner metal"]
 ffo: ["Kyuss", "Electric Wizard", "Sleep"]
 img: burnt_lung
+instagram: burntlung
+spotify: 23vW5Cz7AloQm95LKyNYUJ
+bandcamp: burntlung
 ---
 
 Doom/Stoner metal three-piece Burnt Lung comes out of a whirlwind of 2024 performances with a killer self-titled EP. 

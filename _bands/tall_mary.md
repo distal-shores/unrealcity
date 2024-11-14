@@ -5,6 +5,9 @@ members: ["Cole Klassen (they/she) (vox, bari guitar)", "Sterling MacKenzie (the
 img: tall_mary
 ffo: ["Teenage Jesus","The Jerks","Death Grips"]
 genres: ["noise rock","post-punk"]
+instagram: tallmarynoise
+spotify: 46NWCMQA46kmAAWw6qt6Wb
+bandcamp: tallmary
 ---
 
 Tall Mary makes mystical noise punk in so-called "Vancouver." Their debut double album <span style="font-style:italic">When Will I Find Something New</span> on Kingfisher Bluez, has been described as 

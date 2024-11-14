@@ -185,20 +185,38 @@ footer.site-footer {
 
 .band-name {
   font-size: 1.5rem;
-  color: $offwhite;
+  color: #fff;
   position: absolute;
   top: 25px;
   left: 25px;
   font-family: "sketchnote-square", sans-serif;
-  text-shadow: -2px -2px 0 $coral, 2px -2px 0 $coral, -2px 2px 0 $coral, 2px 2px 0 $coral;
+  text-shadow: -2px -2px 0 $teal, 2px -2px 0 $teal, -2px 2px 0 $teal, 2px 2px 0 $teal;
+  &.headliner {
+    text-shadow: -2px -2px 0 $coral, 2px -2px 0 $coral, -2px 2px 0 $coral, 2px 2px 0 $coral;
+  }
 }
 
-#band-container {
-  .band-card:nth-child(3n-2) {
-    .band-name {
-      text-shadow: -2px -2px 0 $teal, 2px -2px 0 $teal, -2px 2px 0 $teal, 2px 2px 0 $teal;
+.band-title {
+  color: $offwhite;
+  font-family: "sketchnote-square", sans-serif;
+  text-shadow: -2px -2px 0 $teal, 2px -2px 0 $teal, -2px 2px 0 $teal, 2px 2px 0 $teal;
+}
+
+.band-socials ul {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.25rem 0 0.75rem;
+  list-style: none;
+  margin: 0;
+  gap: 1.5rem;
+  a {
+    font-family: "amatic-sc", sans-serif;
+    font-size: 2rem;
+    &:hover {
+      color: $coral;
     }
   }
+
 }
 
 .band-card {
