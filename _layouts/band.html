@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="post-title" itemprop="name headline">{{ page.name | escape }}</h1>
+            </div>
+            <!-- Right Column with Image -->
+            <div class="col-12 col-md-9">
+                <img class="img-fluid" src="/assets/img/band_photos/{{ page.img }}.jpg" />
+            </div>
+        </div>
+
+        <div class="post-content e-content" itemprop="articleBody">
+            <div class="pt-4">
+                <p>Members: {% for member in page.members %} {{ member }}{% if forloop.last == false %}, {% endif %} {% endfor %}</p>
+                <p>Genres: {% for genre in page.genres %} {{ genre | capitalize }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+                <p>For Fans Of: {% for fo in page.ffo %} {{ fo }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+                {{ content }}
+            </div>
+        </div>
+    </div>
+
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

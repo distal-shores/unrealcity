@@ -1,0 +1,10 @@
+---
+name: Weak Knees
+layout: band
+members: ["Rory Munro (guitar, vocals)", "Stefan Tosheff (guitar, vocals)"]
+img: weak_knees
+genres: ["indie","punk"]
+ffo: ["The Strokes","The Libertines","The Hives"]
+---
+
+Airy, jangly riffs, big kicks and punchy drums underscore Weak Knees' upbeat indie tunes on their debut EP, "Dude, You Crying?" Katie So's voice glides from slouch to scream and leads a chorus of gang vocals through some intensely relatable millennial feelings. With shows from Sled Island to Toronto, Victoria and York, Ontario in the last two years and a stunner of a video set for STANDARDS, Weak Knees are firming up pretty nice.

@@ -1,0 +1,26 @@
+<header class="site-header" role="banner">
+
+    <div class="wrapper d-flex align-items-center justify-content-between">
+        {%- assign default_paths = site.pages | map: "path" -%}
+        {%- assign page_paths = site.header_pages | default: default_paths -%}
+        <a class="site-title" href="{{ '/' | relative_url }}"><img class="logo" src="{{ '/assets/img/logo_1571x831.png' | relative_url }}" /></a>
+
+        {%- if page_paths -%}
+        <nav class="site-nav ms-auto">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="page-link bang me-4" href="https://buytickets.at/unrealcitymusicfestival1/1458136" alt="Link to buy tickets for Unreal City Music Festival" target="_blank">Tickets</a>
+                </li>
+                {%- for path in page_paths -%}
+                {%- assign my_page = site.pages | where: "path", path | first -%}
+                {%- if my_page.title -%}
+                <li class="nav-item">
+                    <a class="page-link me-3" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                </li>
+                {%- endif -%}
+                {%- endfor -%}
+            </ul>
+        </nav>
+        {%- endif -%}
+    </div>
+</header>

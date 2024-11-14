@@ -1,0 +1,287 @@
+---
+---
+
+$black: #060606;
+$coral: #e57360;
+$teal: #63b0bb;
+$offwhite: #d1d1d1;
+
+
+* {
+  color: $offwhite;
+  font-family: "source-sans-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  color: $teal;
+  text-decoration: none;
+  &:hover {
+    color: $coral;
+  }
+  &:visited {
+    color: darken($teal, 20%);
+  }
+}
+#bands {
+  max-width: 940px;
+  margin: 0 auto;
+}
+main.page-content {
+  background-color: $black;
+  color: $offwhite;
+}
+footer.site-footer {
+  background-color: $black;
+  border-top: 2px solid $offwhite;
+  color: $offwhite;
+}
+.wrapper.wide {
+  max-width: calc(1200px - (30px * 2));
+}
+#fest_poster {
+  border: 5px solid $offwhite;
+}
+.accordion,
+.accordion-item,
+.accordion-button {
+  background-color: transparent;
+}
+.accordion-button,
+.accordion-body {
+  color: $offwhite;
+  padding: 1.5rem 0;
+}
+.accordion {
+  .accordion-item:not(:first-of-type) {
+    .accordion-button {
+      padding-top: 0;
+    }
+  }
+  .accordion-body {
+    padding-top: 0;
+  }
+}
+.accordion-button {
+  font-family: "amatic-sc", sans-serif;
+  color: $teal;
+  font-size: 1.5rem;
+  &:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e57360'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  }
+}
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: $teal;
+  box-shadow: none;
+}
+.site-header {
+  background-image: url('/assets/img/bg_stars.png');
+  background-repeat: repeat;
+  background-size: auto;
+  border-bottom: 3px solid $coral;
+  border-top: 6px solid $teal;
+
+  .logo {
+    width: 200px;
+  }
+
+  .page-link {
+    color: $offwhite;
+    font-family: "sketchnote-square", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    position: relative;
+    z-index: 0;
+
+    &.active {
+      color: $coral;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      color: $coral;
+    }
+
+    &.bang {
+      &::before {
+        background-image: url('/assets/img/link_bang.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        content: "";
+        height: 56px;
+        left: -23%;
+        position: absolute;
+        top: -3px;
+        width: 138%;
+        z-index: -1;
+      }
+
+      &:hover {
+        &::before {
+          background-image: url('/assets/img/link_bang_hover.png');
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    min-height: 140px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .site-title {
+      flex-basis: 100%;
+    }
+    .site-nav {
+      position: initial;
+      top: initial;
+      right: initial;
+      background-color: transparent;
+      border: none;
+      text-align: initial;
+    }
+    .logo {
+      width: 150px;
+      padding: 1rem 0;
+    }
+    .nav {
+      padding-bottom: 1rem;
+      justify-content: center;
+      margin: 0;
+    }
+    .nav-item {
+      min-width: 160px;
+      .page-link.bang::before {
+        top: 1px;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .nav-item {
+      min-width: 130px;
+      .page-link {
+        font-size: 1.5rem;
+        &.bang {
+          &::before {
+            height: 53px;
+            width: 116%;
+            left: -11%;
+            top: -3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.band-name {
+  font-size: 1.5rem;
+  color: $offwhite;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-family: "sketchnote-square", sans-serif;
+  text-shadow: -2px -2px 0 $coral, 2px -2px 0 $coral, -2px 2px 0 $coral, 2px 2px 0 $coral;
+}
+
+#band-container {
+  .band-card:nth-child(3n-2) {
+    .band-name {
+      text-shadow: -2px -2px 0 $teal, 2px -2px 0 $teal, -2px 2px 0 $teal, 2px 2px 0 $teal;
+    }
+  }
+}
+
+.band-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+    height: calc(100vw - 30px);
+    .band-frame {
+      width: 100vw;
+      height: calc(100vw - 30px);
+      max-width: 100%;
+    }
+  }
+}
+
+.band-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  max-width: 300px;
+}
+
+.band-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.social-media-list {
+  padding-left: 0;
+  display: flex;
+  li {
+    display: inline-block;
+  }
+  li + li {
+    padding-top: 0;
+  }
+  .social-icon {
+    &:not(:last-of-type) {
+      margin-right: 0.5rem;
+    }
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+.sponsor-list {
+  @media screen and (min-width: 600px) {
+    padding-top: 1rem;
+  }
+  .sponsor-logos {
+    gap: 0.5rem;
+    img {
+      max-height: 50px;
+      width: auto;
+      &.img-square {
+        max-height: 75px;
+      }
+    }
+  }
+}
+
+.adornment-img {
+  position: absolute;
+  max-width: 300px;
+  right: 0;
+  bottom: 20px;
+  opacity: 65%;
+  @media screen and (max-width: 600px) {
+    position: absolute;
+    bottom: -70px;
+    max-width: 100%;
+  }
+}

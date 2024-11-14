@@ -1,0 +1,26 @@
+<ul class="social-media-list justify-content-end">
+    {%- if site.instagram_username -%}
+        <li class="social-icon">
+            <a href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}">
+                <img src="/assets/img/social_icons/instagram_white.png" alt="Instagram logo" />
+            </a>
+        </li>
+    {%- endif -%}
+    {%- if site.spotify_username -%}
+        <li class="social-icon">
+            <a href="https://open.spotify.com/user/{{ site.spotify_username| cgi_escape | escape }}">
+                <img src="/assets/img/social_icons/spotify_white.png" alt="Spotify logo" />
+            </a>
+        </li>
+    {%- endif -%}
+    {%- if site.youtube_username -%}
+        <li>
+            <a href="https://youtube.com/{{ site.youtube_username| cgi_escape | escape }}">
+                <svg class="svg-icon">
+                    <use xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"></use>
+                </svg>
+                <span class="username">{{ site.youtube_username| escape }}</span>
+            </a>
+        </li>
+    {%- endif -%}
+</ul>

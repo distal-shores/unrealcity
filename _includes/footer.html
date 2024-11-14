@@ -1,0 +1,33 @@
+<footer class="site-footer h-card pb-0">
+    <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+    <div class="wrapper position-relative overflow-hidden z-0">
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-8 col-sm-12">
+                <div class="content">
+                    <p>{{ site.title | escape }}</p>
+                    {%- if site.email -%}
+                        <p><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                    {%- endif -%}
+                    <p>{{- site.description | escape -}}</p>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-4 col-sm-12">
+                <div class="content">
+                    {%- include social.html -%}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                {%- include sponsors.html -%}
+            </div>
+        </div>
+        <img class="adornment-img z-n1" src="/assets/img/monster.jpg" alt="Ellie the fog monster, UC's mascot" />
+    </div>
+
+</footer>
+
