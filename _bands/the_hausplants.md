@@ -10,4 +10,4 @@ spotify: 34gYqUjMtcnUUBNoZ94tF3
 bandcamp: thehausplants
 ---
 
-The Hausplants are an indie post-punk band from the xʷməθkʷəy̓əm, Sḵwx̱wú7mesh, səlilwətaʔɬ (Vancouver) Canada. Hailing from Iran, Mongolia, and Minnesota, USA, their sound is a synthesis of their diverse backgrounds in music and life. Forming in 2022, the band came together to create music that is liberated, energetic, and experimental. They have played numerous shows in their adopted city over the last two years. They are currently recording a second EP (following 2023's Bright, Indirect Light), scheduled for release in February 2025.
+The Hausplants make electrifying indie rock in Vancouver by way of Iran, Mongolia, and Minnesota, weaving diverse musical and cultural influences into a sound that's both bold, bright and boundary-pushing. Since their formation in 2022, The Hausplants have been a fixture on diverse bills around the city with their experimental style, becoming a standout act in their adopted city. Following the success of their 2023 debut EP, Bright, Indirect Light, the band is gearing up to release their highly anticipated follow-up in February 2025.
