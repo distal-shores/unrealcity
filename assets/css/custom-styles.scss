@@ -130,7 +130,14 @@ footer.site-footer {
   }
 
   .wrapper {
+    max-width: 940px;
     min-height: 140px;
+  }
+
+  .nav-item {
+    @media screen and (max-width: 400px) {
+      min-width: 110px;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -159,7 +166,6 @@ footer.site-footer {
       margin: 0;
     }
     .nav-item {
-      min-width: 160px;
       .page-link.bang::before {
         top: 1px;
       }
@@ -167,7 +173,6 @@ footer.site-footer {
   }
   @media screen and (max-width: 400px) {
     .nav-item {
-      min-width: 130px;
       .page-link {
         font-size: 1.5rem;
         &.bang {
@@ -301,5 +306,50 @@ footer.site-footer {
     position: absolute;
     bottom: -70px;
     max-width: 100%;
+  }
+}
+
+#schedule {
+
+  .schedule {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .day {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .day h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f96a6a;
+    font-family: "sketchnote-square", sans-serif;
+  }
+
+  .band {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    a {
+      font-family: "amatic-sc", sans-serif;
+    }
+    span {
+      font-family: "sketchnote-square", sans-serif;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .schedule {
+      grid-template-columns: 1fr;
+    }
   }
 }
