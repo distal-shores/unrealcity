@@ -23,7 +23,7 @@ email: unrealcityfest@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A two-day rock music festival at Russian Hall in Vancouver, BC, Canada on the unceded traditional territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil-Waututh) Nations.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://unrealcity.local" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://unrealcity.rocks" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: unrealcityfest
 spotify_username:  31mvisvboc2cmkihrnclk5w7vdrq
 
