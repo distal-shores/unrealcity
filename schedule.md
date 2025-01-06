@@ -17,7 +17,7 @@ wide: true
     </div>
     <div class="day" id="saturday">
         <h2>Saturday - Jan 11</h2>
-        <div class="band"><a href="/bands/cortico.html">Cortico</a><span>3:00</span></div>
+        <div class="band"><a href="/bands/beebomb.html">BEEBOMB</a><span>3:00</span></div>
         <div class="band"><a href="/bands/mental_health.html">Mental Health</a><span>3:45</span></div>
         <div class="band"><a href="/bands/weak_knees.html">Weak Knees</a><span>4:30</span></div>
         <div class="band"><a href="/bands/superkrystal.html">Super Krystal</a><span>5:30</span></div>
