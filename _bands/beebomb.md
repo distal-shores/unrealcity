@@ -1,7 +1,7 @@
 ---
 name: BEEBOMB
 layout: band
-members: ["Devalin Galloway + 2"]
+members: ["Devalin Galloway (drums), Rachel Cabot (synths, vocals), Rhi Mcgrath (guitar, vocals)"]
 genres: ["twee","powerpop"]
 ffo: ["Camera Obscura","The Pains of Being Pure at Heart","Teenage Fanclub"]
 img: beebomb
