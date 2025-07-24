@@ -1,0 +1,293 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+  }
+
+  .gallery-item {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Lightbox styles */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .lightbox.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .lightbox-content {
+    position: relative;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    line-height: 1;
+    transition: opacity 0.2s;
+  }
+
+  .lightbox-close:hover {
+    opacity: 0.7;
+  }
+
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    user-select: none;
+    transition: opacity 0.2s;
+    z-index: 10000;
+  }
+
+  .lightbox-nav:hover {
+    opacity: 0.7;
+  }
+
+  .lightbox-prev {
+    left: 20px;
+  }
+
+  .lightbox-next {
+    right: 20px;
+  }
+
+  .lightbox-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery-item img {
+      height: 150px;
+    }
+
+    .lightbox-close {
+      top: 10px;
+      right: 15px;
+      font-size: 30px;
+    }
+
+    .lightbox-nav {
+      font-size: 30px;
+      padding: 15px;
+    }
+  }
+</style>
+
+<p>The inaugural Unreal City Festival 2025 celebrated the city's underground rock music culture for two days of shows from incredible local artists. A mix of punk, indie, shoegaze, metal, post-rock, and post-punk shouted out the city's rich DIY spirit over two days, January 10-11 2025.</p>
+
+<p>Now moving into the second edition, Unreal City is built by artists, for artists. We'll be taking over the Russian Hall in Vancouver's historic Strathcona/Raymur/Hogan's Alley again, January 2026, as well as expanding with select programming at venues TBA.</p>
+
+<p>Our unique festival format finds bands and music artists upstairs, while downstairs you get access to the coziest, Grandma's-living-room style lounge in the city: DJs, hot food, drinks, on-site tattoo artists, and more.</p>
+
+<p>Check out last year's <a href="/bands">Bands</a> page for more info on who performed in 2025, or hit up the <a href="/faq">FAQ</a> for answers to your burning questions.</p>
+
+<p>Are you an artist or band? Our <a href="/2026-submit">2026 Application Form</a> is accepting submissions until Friday, August 29, 2025.</p>
+
+<p>Artisan/business owner/generous patrons interested in sponsoring Unreal City 2026 may email us at: unrealcityfest *at* gmail *dot* com.</p>
+
+<div class="gallery" id="gallery">
+  {% for file in site.static_files %}
+  {% if file.path contains "/assets/img/gallery/" and file.extname == ".jpg" %}
+  <div class="gallery-item" data-src="{{ file.path }}">
+    <img src="{{ file.path }}" alt="{{ file.basename }}">
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+
+<!-- Lightbox HTML -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <span class="lightbox-nav lightbox-prev" id="lightbox-prev">&#8249;</span>
+    <img id="lightbox-img" src="" alt="">
+    <span class="lightbox-nav lightbox-next" id="lightbox-next">&#8250;</span>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const gallery = document.getElementById('gallery');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+    const counter = document.getElementById('lightbox-counter');
+
+    let currentIndex = 0;
+    let images = [];
+
+    // Initialize
+    if (gallery) {
+      images = Array.from(gallery.querySelectorAll('.gallery-item'));
+      console.log('Found', images.length, 'gallery images');
+
+      // Add click listeners to gallery images
+      images.forEach((item, index) => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('Image clicked:', index);
+          openLightbox(index);
+        });
+      });
+    }
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const src = images[index].dataset.src;
+      const alt = images[index].querySelector('img').alt;
+
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      updateCounter();
+
+      lightbox.style.display = 'flex';
+      // Trigger reflow for animation
+      lightbox.offsetHeight;
+      lightbox.classList.add('active');
+
+      document.body.style.overflow = 'hidden';
+      console.log('Lightbox opened for image:', index);
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      setTimeout(() => {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = '';
+      }, 300);
+      console.log('Lightbox closed');
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      const src = images[currentIndex].dataset.src;
+      const alt = images[currentIndex].querySelector('img').alt;
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      updateCounter();
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      const src = images[currentIndex].dataset.src;
+      const alt = images[currentIndex].querySelector('img').alt;
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      updateCounter();
+    }
+
+    function updateCounter() {
+      counter.textContent = `${currentIndex + 1} / ${images.length}`;
+    }
+
+    // Event listeners
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeLightbox);
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', showNext);
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', showPrev);
+    }
+
+    // Close on background click
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (!lightbox.classList.contains('active')) return;
+
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowRight') {
+        showNext();
+      } else if (e.key === 'ArrowLeft') {
+        showPrev();
+      }
+    });
+
+    console.log('Custom lightbox initialized');
+  })();
+</script>
