@@ -31,6 +31,7 @@ spotify_username:  31mvisvboc2cmkihrnclk5w7vdrq
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 collections:
   bands:
     output: true

@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
+redirect_to: /about/
 ---
 
 <a href="https://buytickets.at/unrealcitymusicfestival1/1458136" alt="Link to buy tickets for Unreal City Music Festival">
