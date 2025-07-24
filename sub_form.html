@@ -1,0 +1,234 @@
+---
+layout: default
+title: Unreal City 2026 Application Form
+permalink: /2026-submit/
+---
+
+<div class="form-container">
+    <h1 class="form-title">Unreal City 2026 Application Form</h1>
+
+    <form id="unreal-city-form">
+        <div class="form-group">
+            <label for="bandName">Band name <span class="required">*</span></label>
+            <input type="text" id="bandName" name="bandName" required>
+        </div>
+
+        <div class="form-group large-textarea">
+            <label for="bandMembers">Band members + roles <span class="required">*</span></label>
+            <textarea id="bandMembers" name="bandMembers" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location <span class="optional">(indicate state/country if not in Canada)</span> <span class="required">*</span></label>
+            <input type="text" id="location" name="location" required>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website">
+        </div>
+
+        <div class="form-group">
+            <label for="spotify">Spotify (or other streaming service)</label>
+            <input type="url" id="spotify" name="spotify">
+        </div>
+
+        <div class="form-group">
+            <label for="bandcamp">Bandcamp</label>
+            <input type="url" id="bandcamp" name="bandcamp">
+        </div>
+
+        <div class="form-group">
+            <label for="instagram">Instagram</label>
+            <input type="url" id="instagram" name="instagram">
+        </div>
+
+        <div class="form-group">
+            <label for="similarBands">Up to 3 other bands you (or other people) think you sound like</label>
+            <input type="text" id="similarBands" name="similarBands">
+        </div>
+
+        <div class="form-group">
+            <label for="songLink1">Song link 1 <span class="required">*</span><br></label>
+            <input type="url" id="songLink1" name="songLink1" required>
+            <span class="small">Please ensure we can download it - GDrive or similar, SoundCloud private links with download enabled work too</span>
+        </div>
+
+        <div class="form-group">
+            <label for="songLink2">Song link 2 <span class="required">*</span><br></label>
+            <input type="url" id="songLink2" name="songLink2" required>
+            <span class="small">Please ensure we can download it - GDrive or similar, SoundCloud private links with download enabled work too</span>
+        </div>
+
+        <div class="form-group">
+            <label for="liveVideo">Link to your best, most representative live performance video</label>
+            <input type="url" id="liveVideo" name="liveVideo">
+        </div>
+
+        <div class="form-group">
+            <label for="pressLink1">Link to press clipping 1</label>
+            <input type="url" id="pressLink1" name="pressLink1">
+        </div>
+
+        <div class="form-group">
+            <label for="pressLink2">Link to press clipping 2</label>
+            <input type="url" id="pressLink2" name="pressLink2">
+        </div>
+
+        <div class="section-divider">
+            <div class="section-note">
+                We will use the information in the following two questions to ensure representation and diversity in the festival lineup:
+            </div>
+        </div>
+
+        <div class="form-group large-textarea">
+            <label for="diversity">Use the space below to include any details about the racial, ethnic or cultural makeup of your band</label>
+            <textarea id="diversity" name="diversity"></textarea>
+        </div>
+
+        <div class="form-group large-textarea">
+            <label for="lgbtq">If any of your band members self-identify as LGBTQ+, please use the space below to elaborate in whatever way you feel comfortable</label>
+            <textarea id="lgbtq" name="lgbtq"></textarea>
+        </div>
+
+        <div class="form-group large-textarea">
+            <label for="communityContribution">Please indicate ways in which your band contributes to the artistic and cultural community of "Vancouver." Shows organized, causes supported, assistance rendered, etc.</label>
+            <textarea id="communityContribution" name="communityContribution"></textarea>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="commitment" name="commitment" required>
+            <label for="commitment">
+                <strong>Unreal City is a nonprofit, collaborative, community-driven organization dedicated to giving local artists a platform while raising their profile. Please acknowledge that as a 2026 participant, your project would be committed to supporting these goals</strong> <span class="required">*</span>
+            </label>
+        </div>
+
+        <div class="section-divider">
+            <div class="section-note">
+                <strong>Please note:</strong> The following question will not be used in weighing artist eligibility for Unreal City 2026
+            </div>
+        </div>
+
+        <div class="form-group large-textarea">
+            <label for="volunteerHelp">As a DIY festival we're always looking for volunteers. Please indicate any ways in which your band might be able to contribute volunteer help (i.e. have car will travel, multimedia support, general setup etc.)</label>
+            <textarea id="volunteerHelp" name="volunteerHelp"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+        <div id="form-status" class="form-status" style="display: none;"></div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('unreal-city-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Clear previous errors
+        document.querySelectorAll('.error-field').forEach(field => {
+            field.classList.remove('error-field');
+        });
+        document.querySelectorAll('.error-message').forEach(msg => {
+            msg.remove();
+        });
+
+        const formData = new FormData(this);
+        const data = {};
+
+        // Convert FormData to object
+        for (let [key, value] of formData.entries()) {
+            if (key === 'commitment') {
+                data[key] = true; // checkbox is checked if present
+            } else {
+                data[key] = value.trim();
+            }
+        }
+
+        // Add commitment as false if not checked
+        if (!data.commitment) {
+            data.commitment = false;
+        }
+
+        const statusDiv = document.getElementById('form-status');
+        const submitBtn = document.querySelector('.submit-btn');
+
+        // Show loading state
+        statusDiv.innerHTML = 'Submitting your application...';
+        statusDiv.className = 'form-status loading';
+        statusDiv.style.display = 'block';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch('https://uc-form-handler.vercel.app/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                statusDiv.innerHTML = `✅ ${result.message} Thank you for applying to Unreal City 2026!`;
+                statusDiv.className = 'form-status success';
+                this.reset(); // Clear the form
+            } else {
+                // Handle validation errors
+                if (result.message && result.message.includes('Missing required fields')) {
+                    statusDiv.innerHTML = `❌ ${result.message}`;
+                    statusDiv.className = 'form-status error';
+
+                    // Highlight missing fields
+                    const requiredFields = ['bandName', 'bandMembers', 'location', 'songLink1', 'songLink2', 'commitment'];
+                    requiredFields.forEach(fieldName => {
+                        const field = document.getElementById(fieldName);
+                        if (field && (!data[fieldName] || data[fieldName] === '')) {
+                            field.classList.add('error-field');
+                        }
+                    });
+                } else {
+                    statusDiv.innerHTML = `❌ ${result.message || 'Error submitting application'}`;
+                    statusDiv.className = 'form-status error';
+                }
+            }
+        } catch (error) {
+            statusDiv.innerHTML = `❌ Network Error: Unable to submit application. Please check your connection and try again.`;
+            statusDiv.className = 'form-status error';
+            console.error('Submission error:', error);
+        } finally {
+            submitBtn.disabled = false;
+        }
+    });
+
+    // Real-time validation for URL fields
+    document.querySelectorAll('input[type="url"]').forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.value && !isValidUrl(this.value)) {
+                this.classList.add('error-field');
+
+                // Remove existing error message
+                const existingError = this.parentNode.querySelector('.error-message');
+                if (existingError) existingError.remove();
+
+                // Add error message
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'error-message';
+                errorMsg.textContent = 'Please enter a valid URL (e.g., https://example.com)';
+                this.parentNode.appendChild(errorMsg);
+            } else {
+                this.classList.remove('error-field');
+                const errorMsg = this.parentNode.querySelector('.error-message');
+                if (errorMsg) errorMsg.remove();
+            }
+        });
+    });
+
+    function isValidUrl(string) {
+        try {
+            new URL(string);
+            return true;
+        } catch (_) {
+            return false;
+        }
+    }
+</script>

@@ -5,7 +5,18 @@ $black: #060606;
 $coral: #e57360;
 $teal: #63b0bb;
 $offwhite: #d1d1d1;
+$gray: #666;
 
+// Form color variables
+$form-success-green-bg: #d4fcd0;
+$form-success-green-text: #155724;
+$form-success-green-border: #c3e6cb;
+$form-error-bg: #f8d7da;
+$form-error-text: #721c24;
+$form-error-border: #f5c6cb;
+$form-status-loading-bg: #d1ecf1;
+$form-status-loading-text: #0c5460;
+$form-status-loading-border: #bee5eb;
 
 * {
   color: $offwhite;
@@ -375,4 +386,169 @@ footer.site-footer {
       color: black;
     }
   }
+}
+
+// Form styles
+
+.form-title {
+  font-family: "amatic-sc", sans-serif;
+  color: $teal;
+  margin-bottom: 24px;
+}
+
+.form-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-family: "source-sans-pro", sans-serif;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: $offwhite;
+  font-size: 20px;
+}
+
+.form-group span.small {
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  color: $black;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: $teal;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group.large-textarea textarea {
+  min-height: 150px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 4px;
+  transform: scale(1.2);
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.optional {
+  color: $offwhite;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.required {
+  color: $coral;
+}
+
+.section-divider {
+  border-top: 2px solid $offwhite;
+  margin: 40px 0 30px 0;
+  padding-top: 20px;
+}
+
+.section-note {
+  background-color: $offwhite;
+  color: $black;
+  padding: 15px;
+  border-left: 4px solid $coral;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.section-note strong {
+  color: $black;
+}
+
+.submit-btn {
+  background-color: $teal;
+  color: $black;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: darken($teal, 10%);
+}
+
+.submit-btn:disabled {
+  background-color: $gray;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.form-status.success {
+  background-color: $form-success-green-bg;
+  color: $form-success-green-text;
+  border: 1px solid $form-success-green-border;
+}
+
+.form-status.error {
+  background-color: $form-error-bg;
+  color: $form-error-text;
+  border: $form-error-border;
+}
+
+.form-status.loading {
+  background-color: $form-status-loading-bg;
+  color: $form-status-loading-text;
+  border: $form-status-loading-border;
+}
+
+.error-field {
+  border-color: $form-error-text;
+}
+
+.error-message {
+  color: $form-error-text;
+  font-size: 14px;
+  margin-top: 5px;
 }
