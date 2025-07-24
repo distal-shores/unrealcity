@@ -552,3 +552,24 @@ footer.site-footer {
   font-size: 14px;
   margin-top: 5px;
 }
+
+.help-section {
+  margin-top: 26px;
+}
+
+.help-toggle {
+  background-color: $gray;
+  color: $offwhite;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.help-toggle:hover {
+  background-color: darken($gray, 10%);
+}

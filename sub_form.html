@@ -6,15 +6,16 @@ permalink: /2026-submit/
 
 <div class="form-container">
     <h1 class="form-title">Unreal City 2026 Application Form</h1>
+    <p>Unreal City 2026 takes place January 15-18 at Russian Hall and other venues in K'emk'emeláy/Vancouver.</p>
 
     <form id="unreal-city-form">
         <div class="form-group">
-            <label for="bandName">Band name <span class="required">*</span></label>
+            <label for="bandName">Artist name <span class="required">*</span></label>
             <input type="text" id="bandName" name="bandName" required>
         </div>
 
         <div class="form-group large-textarea">
-            <label for="bandMembers">Band members + roles <span class="required">*</span></label>
+            <label for="bandMembers">Artist members + roles <span class="required">*</span></label>
             <textarea id="bandMembers" name="bandMembers" required></textarea>
         </div>
 
@@ -82,17 +83,17 @@ permalink: /2026-submit/
         </div>
 
         <div class="form-group large-textarea">
-            <label for="diversity">Use the space below to include any details about the racial, ethnic or cultural makeup of your band</label>
+            <label for="diversity">Use the space below to include any details about the racial, ethnic or cultural makeup of yourself or your band</label>
             <textarea id="diversity" name="diversity"></textarea>
         </div>
 
         <div class="form-group large-textarea">
-            <label for="lgbtq">If any of your band members self-identify as LGBTQ+, please use the space below to elaborate in whatever way you feel comfortable</label>
+            <label for="lgbtq">If you or any of your band members self-identify as LGBTQ+, please use the space below to elaborate in whatever way you feel comfortable</label>
             <textarea id="lgbtq" name="lgbtq"></textarea>
         </div>
 
         <div class="form-group large-textarea">
-            <label for="communityContribution">Please indicate ways in which your band contributes to the artistic and cultural community of "Vancouver." Shows organized, causes supported, assistance rendered, etc.</label>
+            <label for="communityContribution">Please indicate ways in which you or your band contributes to the artistic and cultural community of "Vancouver." Shows organized, causes supported, assistance rendered, etc.</label>
             <textarea id="communityContribution" name="communityContribution"></textarea>
         </div>
 
@@ -110,13 +111,32 @@ permalink: /2026-submit/
         </div>
 
         <div class="form-group large-textarea">
-            <label for="volunteerHelp">As a DIY festival we're always looking for volunteers. Please indicate any ways in which your band might be able to contribute volunteer help (i.e. have car will travel, multimedia support, general setup etc.)</label>
+            <label for="volunteerHelp">As a DIY festival we're always looking for volunteers. Please indicate any ways in which you or your band might be able to contribute volunteer help (i.e. have car will travel, multimedia support, general setup etc.)</label>
             <textarea id="volunteerHelp" name="volunteerHelp"></textarea>
         </div>
 
         <button type="submit" class="submit-btn">Submit Application</button>
         <div id="form-status" class="form-status" style="display: none;"></div>
     </form>
+
+    <!-- Help Section -->
+    <div class="help-section">
+        <button class="help-toggle collapsed" id="help-toggle" type="button">
+            Having trouble with the web form?
+        </button>
+        <div class="help-content" id="help-content" style="display: none;">
+            <p>
+                You can also download and fill out a PDF version of this application form, then email it to us as an attachment to: unrealcityfest *at* gmail *dot* com.
+                <br>Subject line: <strong>2026 Artist Application Form: *Artist Name*</strong>
+            </p>
+
+            <p>
+                <a href="/assets/files/unreal-city-2026-application.pdf" class="pdf-download" download>
+                    📄 Download PDF Application Form
+                </a>
+            </p>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -231,4 +251,18 @@ permalink: /2026-submit/
             return false;
         }
     }
+
+    // Help section toggle functionality
+    document.getElementById('help-toggle').addEventListener('click', function() {
+        const content = document.getElementById('help-content');
+        const toggle = document.getElementById('help-toggle');
+
+        if (content.style.display === 'none') {
+            content.style.display = 'block';
+            toggle.classList.remove('collapsed');
+        } else {
+            content.style.display = 'none';
+            toggle.classList.add('collapsed');
+        }
+    });
 </script>
