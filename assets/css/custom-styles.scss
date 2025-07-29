@@ -108,6 +108,7 @@ footer.site-footer {
     font-style: normal;
     font-size: 2rem;
     position: relative;
+    margin-left: 0;
     z-index: 0;
 
     &.active {
@@ -148,12 +149,6 @@ footer.site-footer {
     min-height: 140px;
   }
 
-  .nav-item {
-    @media screen and (max-width: 400px) {
-      min-width: 110px;
-    }
-  }
-
   @media screen and (max-width: 600px) {
     .wrapper {
       flex-wrap: wrap;
@@ -163,24 +158,37 @@ footer.site-footer {
       flex-basis: 100%;
     }
     .site-nav {
+      float: none;
       position: initial;
       top: initial;
       right: initial;
       background-color: transparent;
       border: none;
       text-align: initial;
+      margin: 0 auto;
     }
     .logo {
       width: 150px;
       padding: 1rem 0;
     }
     .nav {
+      flex-wrap: nowrap;
       padding-bottom: 1rem;
       justify-content: center;
       margin: 0;
     }
     .nav-item {
-      .page-link.bang::before {
+      margin: 0;
+      a {
+        font-size: 1.5rem;
+      }
+      .page-link {
+        min-width: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        font-size: 1.5rem;
+      }
+        .page-link.bang::before {
         top: 1px;
       }
     }
@@ -188,7 +196,7 @@ footer.site-footer {
   @media screen and (max-width: 400px) {
     .nav-item {
       .page-link {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         &.bang {
           &::before {
             height: 53px;
