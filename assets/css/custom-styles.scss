@@ -3,9 +3,11 @@
 
 $black: #060606;
 $coral: #e57360;
-$teal: #63b0bb;
-$offwhite: #d1d1d1;
+$teal: #559c99;
+$offwhite: #fcf5da;
 $gray: #666;
+
+$secondary: $offwhite;
 
 // Form color variables
 $form-success-green-bg: #d4fcd0;
@@ -19,7 +21,7 @@ $form-status-loading-text: #0c5460;
 $form-status-loading-border: #bee5eb;
 
 * {
-  color: $offwhite;
+  color: black;
   font-family: "source-sans-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -29,27 +31,36 @@ a {
   color: $teal;
   text-decoration: none;
   &:hover {
-    color: $coral;
+    color: $secondary;
   }
   &:visited {
     color: darken($teal, 20%);
   }
 }
-#bands {
+#bands,
+#bands-2025 {
   max-width: 940px;
   margin: 0 auto;
+}
+#faq {
+  h3 {
+    color: $teal;
+    font-family: sketchnote-square, sans-serif;
+  }
 }
 .coral {
   color: $coral;
 }
 main.page-content {
-  background-color: $black;
-  color: $offwhite;
+  background-color: $offwhite;
+  color: black;
 }
 footer.site-footer {
   background-color: $black;
-  border-top: 2px solid $offwhite;
-  color: $offwhite;
+  border-top: 2px solid $teal;
+  p {
+    color: white;
+  }
 }
 .wrapper.wide {
   max-width: calc(1200px - (30px * 2));
@@ -64,7 +75,7 @@ footer.site-footer {
 }
 .accordion-button,
 .accordion-body {
-  color: $offwhite;
+  color: black;
   padding: 1.5rem 0;
 }
 .accordion {
@@ -78,23 +89,20 @@ footer.site-footer {
   }
 }
 .accordion-button {
-  font-family: "amatic-sc", sans-serif;
-  color: $teal;
+  color: black;
   font-size: 1.5rem;
   &:after {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e57360'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
   }
 }
 .accordion-button:not(.collapsed) {
   background-color: transparent;
-  color: $teal;
+  color: black;
   box-shadow: none;
 }
 .site-header {
-  background-image: url('/assets/img/bg_stars.jpg');
-  background-repeat: repeat;
-  background-size: auto;
-  border-bottom: 3px solid $coral;
+  background-color: black;
+  border-bottom: 3px solid $teal;
   border-top: 6px solid $teal;
 
   .logo {
@@ -112,13 +120,13 @@ footer.site-footer {
     z-index: 0;
 
     &.active {
-      color: $coral;
+      color: $secondary;
     }
 
     &:hover {
       cursor: pointer;
       text-decoration: none;
-      color: $coral;
+      color: $secondary;
     }
 
     &.bang {
@@ -219,7 +227,7 @@ footer.site-footer {
   font-family: "sketchnote-square", sans-serif;
   text-shadow: -2px -2px 0 $teal, 2px -2px 0 $teal, -2px 2px 0 $teal, 2px 2px 0 $teal;
   &.headliner {
-    text-shadow: -2px -2px 0 $coral, 2px -2px 0 $coral, -2px 2px 0 $coral, 2px 2px 0 $coral;
+    text-shadow: -2px -2px 0 $secondary, 2px -2px 0 $secondary, -2px 2px 0 $secondary, 2px 2px 0 $secondary;
   }
 }
 
@@ -240,7 +248,7 @@ footer.site-footer {
     font-family: "amatic-sc", sans-serif;
     font-size: 2rem;
     &:hover {
-      color: $coral;
+      color: $secondary;
     }
   }
 
@@ -322,12 +330,13 @@ footer.site-footer {
   position: absolute;
   max-width: 300px;
   right: 0;
-  bottom: 20px;
+  bottom: -75px;
   opacity: 65%;
   @media screen and (max-width: 600px) {
     position: absolute;
-    bottom: -70px;
+    bottom: -150px;
     max-width: 100%;
+    opacity: 35%;
   }
 }
 
@@ -377,7 +386,7 @@ footer.site-footer {
 }
 
 .sitewide-banner {
-  background-color: $coral;
+  background-color: $secondary;
   min-height: 2.5rem;
   display: flex;
   justify-content: center;
@@ -487,7 +496,7 @@ footer.site-footer {
 }
 
 .required {
-  color: $coral;
+  color: $secondary;
 }
 
 .section-divider {
@@ -500,7 +509,7 @@ footer.site-footer {
   background-color: $offwhite;
   color: $black;
   padding: 15px;
-  border-left: 4px solid $coral;
+  border-left: 4px solid $secondary;
   margin: 20px 0;
   font-style: italic;
 }
@@ -560,7 +569,7 @@ footer.site-footer {
 }
 
 .error-message {
-  color: $coral;
+  color: $secondary;
   font-size: 14px;
   margin-top: 5px;
 }

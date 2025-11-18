@@ -3,9 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-redirect_to: /about/
 ---
 
-<a href="https://buytickets.at/unrealcitymusicfestival1/1458136" alt="Link to buy tickets for Unreal City Music Festival">
-    <img id="fest_poster" src="{{ '/assets/img/poster.jpg' | relative_url }}">
+<a href="https://tickets.unrealcity.rocks" alt="Link to buy tickets for Unreal City Music Festival">
+    <img id="fest_poster" src="{{ '/assets/img/poster2026.jpg' | relative_url }}">
 </a>

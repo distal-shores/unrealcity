@@ -1,13 +1,13 @@
 ---
-layout: page
-title: Bands
-permalink: /bands/
-page_id: "bands"
+layout: default
+title: 2025 Bands
+permalink: /bands-2025/
+page_id: "bands_2025"
 wide: true
 ---
 
 <div class="container">
-    <div class="row gap-3" id="band-container">
+    <div class="row gap-3 justify-content-center" id="band-container">
         <!-- Display headliner bands first -->
         {% for band in site.bands %}
             {% if band.headliner %}

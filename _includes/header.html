@@ -3,14 +3,11 @@
     <div class="wrapper d-flex align-items-center justify-content-between">
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
-        <a class="site-title" href="{{ '/' | relative_url }}"><img class="logo" src="{{ '/assets/img/logo_300x159.png' | relative_url }}" /></a>
+        <a class="site-title" href="{{ '/' | relative_url }}"><img class="logo" src="{{ '/assets/img/logo_for_header.png' | relative_url }}" /></a>
 
 <!--        {%- if page_paths -%}-->
 <!--        <nav class="site-nav ms-auto">-->
 <!--            <ul class="nav">-->
-<!--                <li class="nav-item me-4">-->
-<!--                    <a class="page-link bang me-md-4" href="https://buytickets.at/unrealcitymusicfestival1/1458136" alt="Link to buy tickets for Unreal City Music Festival" target="_blank">Tickets</a>-->
-<!--                </li>-->
 <!--                {%- for path in page_paths -%}-->
 <!--                {%- assign my_page = site.pages | where: "path", path | first -%}-->
 <!--                {%- if my_page.title and my_page.url != "/2026-submit/" -%}-->
@@ -25,6 +22,9 @@
 
         <nav class="site-nav ms-auto">
             <ul class="nav">
+                <li class="nav-item me-0 me-sm-4">
+                    <a class="page-link me-md-4" href="https://tickets.unrealcity.rocks" alt="Link to buy tickets for Unreal City Music Festival" target="_blank">Tickets</a>
+                </li>
                 <li class="nav-item me-0 me-sm-4">
                     <a class="page-link me-md-3" href="/about">About</a>
                 </li>
