@@ -1,9 +1,9 @@
 ---
-name: Aversions
+name: By A Thread
 layout: band
-members: ["Sam Coll (vocals, guitar)", "Chad Devlin (bass, vocals)", "Joe Ross (drums)"]
-genres: ["post-punk","post-hardcore"]
-ffo: ["Killing Joke","The Birthday Party","Fontaines D.C."]
+members: []
+genres: ["post-hardcore"]
+ffo: []
 img: aversions
 instagram: aversionsband
 spotify: 65fB37pXWPMPJrNg1ZJOpR

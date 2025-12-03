@@ -9,9 +9,9 @@ wide: true
 <div class="container">
     <div class="row gap-3 justify-content-center" id="band-container">
         <!-- Display headliner bands first -->
-        {% for band in site.bands %}
+        {% for band in site["bands-2025"] %}
             {% if band.headliner %}
-                <div class="band-card col-md-6 mb-4" style="background-image:url('/assets/img/band_photos/{{ band.img }}.jpg');">
+                <div class="band-card col-md-6 mb-4" style="background-image:url('/assets/img/band_photos/2025/{{ band.img }}.jpg');">
                     <img class="band-frame" src="/assets/img/band_frame.png" />
                     <h2 class="band-name headliner">{{ band.name }}</h2>
                     <a href="{{ band.url }}" class="band-link"></a>
@@ -20,7 +20,7 @@ wide: true
         {% endfor %}
 
         <!-- Then display the remaining bands -->
-        {% for band in site.bands %}
+        {% for band in site["bands-2025"] %}
             {% unless band.headliner %}
                 <div class="band-card col-md-6 mb-4" style="background-image:url('/assets/img/band_photos/{{ band.img }}.jpg');">
                     <img class="band-frame" src="/assets/img/band_frame.png" />
