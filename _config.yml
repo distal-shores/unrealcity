@@ -33,8 +33,9 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
 collections:
-  bands:
+  bands-2025:
     output: true
+    permalink: /bands-2025/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
