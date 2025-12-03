@@ -341,16 +341,20 @@ footer.site-footer {
 }
 
 #schedule {
-
+  .post-header {
+    margin-bottom: 1rem;
+  }
   .schedule {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 20px 0;
   }
 
   .day {
     background: #1a1a1a;
+    flex-direction: column;
+    display: flex;
     padding: 20px;
     border-radius: 10px;
   }
@@ -359,11 +363,19 @@ footer.site-footer {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #f96a6a;
+    color: $teal;
     font-family: "sketchnote-square", sans-serif;
   }
 
+  .day h3 {
+    color: $teal;
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
   .band {
+    color: $offwhite;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -372,18 +384,68 @@ footer.site-footer {
     a {
       font-family: "amatic-sc", sans-serif;
     }
-    span {
+    span.time {
+      color: $teal;
+      line-height: 3rem;
       font-family: "sketchnote-square", sans-serif;
       font-size: 1.5rem;
     }
   }
+  .squished {
+    color: $offwhite;
+    font-weight: 700;
+  }
+
+  .downstairs {
+    margin-top: auto;
+  }
 
   @media (max-width: 768px) {
+    .day {
+      min-height: 0;
+    }
+    .band.hide {
+      display: none;
+    }
     .schedule {
       grid-template-columns: 1fr;
     }
+    .downstairs {
+      margin-top: 3rem;
+    }
+  }
+
+  /* Between 768px and 1124px */
+  @media (min-width: 769px) and (max-width: 1123px) {
+    #thursday .band {
+      width: 500px;
+      margin: 0 auto;
+    }
+    .schedule {
+      grid-template-columns: 1fr 1fr;   /* two cols total */
+    }
+
+    /* Make the first item span the full width (two columns) */
+    .schedule > *:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .upstairs {
+      margin-bottom: 3rem;
+    }
+  }
+  @media (min-width: 1124px) {
+    .day {
+      min-height: 1020px;
+    }
+    .squished {
+      transform: scaleX(0.90);
+      transform-origin: left;
+      text-wrap: nowrap;
+    }
   }
 }
+
 
 .sitewide-banner {
   background-color: $secondary;
