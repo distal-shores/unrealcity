@@ -1,13 +1,16 @@
 ---
 ---
 
+//font-family: "cc-thismanthismonster-var", sans-serif;
+//font-variation-settings: "BITE" 0, "WONK" 0, "CHEW" 0;
+
 $black: #060606;
 $coral: #e57360;
 $teal: #559c99;
 $offwhite: #fcf5da;
 $gray: #666;
 
-$secondary: $offwhite;
+$secondary: $teal;
 
 // Form color variables
 $form-success-green-bg: #d4fcd0;
@@ -111,7 +114,7 @@ footer.site-footer {
 
   .page-link {
     color: $offwhite;
-    font-family: "sketchnote-square", sans-serif;
+    font-family: "cc-thismanthismonster-var", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
@@ -127,6 +130,7 @@ footer.site-footer {
       cursor: pointer;
       text-decoration: none;
       color: $secondary;
+      font-variation-settings: "WONK" 100;
     }
 
     &.bang {
@@ -219,22 +223,42 @@ footer.site-footer {
 }
 
 .band-name {
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-family: "cc-thismanthismonster-var", sans-serif;
   color: #fff;
   position: absolute;
-  top: 25px;
+  top: 10px;
   left: 25px;
-  font-family: "sketchnote-square", sans-serif;
-  text-shadow: -2px -2px 0 $teal, 2px -2px 0 $teal, -2px 2px 0 $teal, 2px 2px 0 $teal;
+  z-index: 3;
+  -webkit-text-stroke: 2px black;
   &.headliner {
-    text-shadow: -2px -2px 0 $secondary, 2px -2px 0 $secondary, -2px 2px 0 $secondary, 2px 2px 0 $secondary;
   }
 }
 
+.band-name::after {
+  content: "";
+  position: absolute;
+  transform: skewX(-12deg);
+  bottom: 0;
+  right: 0;
+  width: 85%; /* how far past the text it extends */
+  height: 0.5em; /* thickness of the swoosh */
+  background: linear-gradient(
+                  to bottom,
+                  lighten($teal, 30%) 0%,
+                  $teal 100%
+  );
+  border-radius: 999px; /* pill shape */
+
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35); /* comic drop shadow */
+  pointer-events: none;
+  z-index: -1;
+}
+
 .band-title {
-  color: $offwhite;
-  font-family: "sketchnote-square", sans-serif;
-  text-shadow: -2px -2px 0 $teal, 2px -2px 0 $teal, -2px 2px 0 $teal, 2px 2px 0 $teal;
+  color: $secondary;
+  font-variation-settings: "BITE" 50;
+  font-family: "cc-thismanthismonster-var", sans-serif;
 }
 
 .band-socials ul {
@@ -254,31 +278,51 @@ footer.site-footer {
 
 }
 
+//.band-card {
+//  position: relative;
+//  background-size: cover;
+//  background-position: center;
+//  width: 300px;
+//  height: 300px;
+//  @media screen and (max-width: 600px) {
+//    width: 100vw;
+//    height: calc(100vw - 30px);
+//    .band-frame {
+//      width: 100vw;
+//      height: calc(100vw - 30px);
+//      max-width: 100%;
+//    }
+//  }
+//}
+
 .band-card {
   position: relative;
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 300px;
-  @media screen and (max-width: 600px) {
-    width: 100vw;
-    height: calc(100vw - 30px);
-    .band-frame {
-      width: 100vw;
-      height: calc(100vw - 30px);
-      max-width: 100%;
-    }
-  }
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
 }
 
-.band-frame {
+.band-card::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
+  background-image: var(--img);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center var(--y, 50%);
   z-index: 1;
-  max-width: 300px;
+}
+
+.band-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+          linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%),
+          linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .band-link {
@@ -287,7 +331,7 @@ footer.site-footer {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 .social-media-list {
