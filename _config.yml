@@ -33,6 +33,9 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
 collections:
+  bands:
+    output: true
+    permalink: /bands/:name/
   bands-2025:
     output: true
     permalink: /bands-2025/:name/
