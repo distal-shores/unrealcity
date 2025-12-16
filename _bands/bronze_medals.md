@@ -10,3 +10,5 @@ spotify: 4FusZpkBHykUyxiN31kFMw
 bandcamp: bronzemedals"
 y: 36
 ---
+
+More info coming soon

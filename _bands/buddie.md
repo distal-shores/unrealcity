@@ -10,3 +10,5 @@ spotify: 2wQf2gXq5hgPbAfHxrQmYI
 bandcamp: buddie
 y: 64
 ---
+
+More info coming soon

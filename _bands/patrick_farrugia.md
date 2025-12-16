@@ -10,3 +10,5 @@ spotify: 2oHYlvzyDXIJDOaTerEAN9
 bandcamp: patrickfarrugia
 y: 14
 ---
+
+More info coming soon.

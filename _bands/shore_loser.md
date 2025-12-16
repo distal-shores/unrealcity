@@ -10,3 +10,5 @@ spotify: N/A
 bandcamp: shoreloser
 y: 25
 ---
+
+More info coming soon.
