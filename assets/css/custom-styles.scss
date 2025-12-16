@@ -178,13 +178,23 @@ footer.site-footer {
       border: none;
       text-align: initial;
       margin: 0 auto;
+      .nav-item:nth-child(4),
+      .nav-item:nth-child(5) {
+        min-width: 45%;
+        text-align: center;
+      }
+      .nav-item:nth-child(4) {
+        text-align: right;
+      }
+      .nav-item:nth-child(5) {
+        text-align: left;
+      }
     }
     .logo {
       width: 150px;
       padding: 1rem 0;
     }
     .nav {
-      flex-wrap: nowrap;
       padding-bottom: 1rem;
       justify-content: center;
       margin: 0;
