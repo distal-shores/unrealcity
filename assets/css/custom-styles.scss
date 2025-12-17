@@ -245,6 +245,8 @@ footer.site-footer {
   }
 }
 
+//font-variation-settings: "BITE" 0, "WONK" 0, "CHEW" 0;
+
 .band-name::after {
   content: "";
   position: absolute;
@@ -335,15 +337,6 @@ footer.site-footer {
   z-index: 2;
 }
 
-.band-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-}
-
 .social-media-list {
   padding-left: 0;
   display: flex;
@@ -415,16 +408,19 @@ footer.site-footer {
 
   .day h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
-    color: $teal;
-    font-family: "sketchnote-square", sans-serif;
+    color: $offwhite;
+    font-family: "ccmeanwhile", sans-serif;
+    font-weight: 700;
   }
 
   .day h3 {
-    color: $teal;
-    font-size: 1.75rem;
+    color: $offwhite;
+    font-size: 1.25rem;
     text-align: center;
+    font-family: "ccmeanwhile", sans-serif;
+    font-weight: 400;
     margin-bottom: 20px;
   }
 
@@ -436,12 +432,18 @@ footer.site-footer {
     font-size: 2rem;
     font-weight: 700;
     a {
-      font-family: "amatic-sc", sans-serif;
+      font-family: "cc-thismanthismonster-var", sans-serif;
+      color: lighten($secondary, 10%);
+      &:visited {
+        color: darken($secondary, 5%);
+      }
     }
     span.time {
-      color: $teal;
+      color: $offwhite;
+      font-family: "ccmeanwhile", sans-serif;
+      font-weight: 400;
+      font-style: normal;
       line-height: 3rem;
-      font-family: "sketchnote-square", sans-serif;
       font-size: 1.5rem;
     }
   }

@@ -6,55 +6,170 @@ page_id: "schedule"
 wide: true
 ---
 <h3>All times approximate/subject to change</h3>
+
 <div class="schedule">
     <div class="day" id="thursday">
         <h2>Thursday - Jan 15</h2>
         <h3>Rickshaw Theatre</h3>
-        <div class="band">Hausplants <span class="time">7:15</span></div>
-        <div class="band">Dusknote <span class="time">8:00</span></div>
-        <div class="band">Disruptions <span class="time">8:45</span></div>
-        <div class="band">Hillsboro <span class="time">9:30</span></div>
-        <div class="band">By A Thread <span class="time">10:15</span></div>
+
+        <div class="band">
+            <a class="band-link squished" href="/bands/{{ 'The Hausplants' | slugify }}/">The Hausplants</a>
+            <span class="time">7:15</span>
+        </div>
+
+        <div class="band">
+            <a class="band-link" href="/bands/{{ 'Dusknote' | slugify }}/">Dusknote</a>
+            <span class="time">8:00</span>
+        </div>
+
+        <div class="band">
+            <a class="band-link" href="/bands/{{ 'Disruptions' | slugify }}/">Disruptions</a>
+            <span class="time">8:45</span>
+        </div>
+
+        <div class="band">
+            <a class="band-link" href="/bands/{{ 'Hillsboro' | slugify }}/">Hillsboro</a>
+            <span class="time">9:30</span>
+        </div>
+
+        <div class="band">
+            <a class="band-link" href="/bands/{{ 'By A Thread' | slugify }}/">By A Thread</a>
+            <span class="time">10:15</span>
+        </div>
     </div>
+
     <div class="day" id="friday">
         <h2>Friday - Jan 16</h2>
+
         <div class="upstairs">
             <h3>Russian Hall - Upstairs</h3>
-            <div class="band">checkedout<span class="time">6:15</span></div>
-            <div class="band">Bloom Effect <span class="time">7:00</span></div>
-            <div class="band">Ira Hardly <span class="time">7:45</span></div>
-            <div class="band">Jody Glenham <span class="time">8:30</span></div>
-            <div class="band">worrywart <span class="time">9:30</span></div>
-            <div class="band">Spencer Krug <span class="time">10:15</span></div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'checkedout' | slugify }}/">checkedout</a><span class="time">6:15</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Bloom Effect' | slugify }}/">Bloom Effect</a>
+                <span class="time">7:00</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Ira Hardly' | slugify }}/">Ira Hardly</a>
+                <span class="time">7:45</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Jody Glenham' | slugify }}/">Jody Glenham</a>
+                <span class="time">8:30</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'worrywart' | slugify }}/">worrywart</a>
+                <span class="time">9:30</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Spencer Krug' | slugify }}/">Spencer Krug</a>
+                <span class="time">10:15</span>
+            </div>
         </div>
+
         <div class="downstairs">
             <h3>Russian Hall - Downstairs</h3>
-            <div class="band">Bleached Heat <span class="time">6:00</span></div>
-            <div class="band"><span class="squished">Michael Slumber</span> <span class="time">7:15</span></div>
-            <div class="band"><span class="squished">Phuture Memoriez</span> <span class="time">9:00</span></div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Bleached Heat' | slugify }}/">Bleached Heat</a>
+                <span class="time">6:00</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link squished" href="/bands/{{ 'Michael Slumber' | slugify }}/">Michael Slumber</a>
+                <span class="time">7:15</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link squished" href="/bands/{{ 'Phuture Memoriez' | slugify }}/">Phuture Memoriez</a>
+                <span class="time">9:00</span>
+            </div>
+
             <div class="band hide">&nbsp;</div>
         </div>
     </div>
+
     <div class="day" id="saturday">
         <h2>Saturday - Jan 17</h2>
+
         <div class="upstairs">
             <h3>Russian Hall - Upstairs</h3>
-            <div class="band">Conduit <span class="time">3:00</span></div>
-            <div class="band"><span class="squished">Small Pleasures</span> <span class="time">4:00</span></div>
-            <div class="band">Sundress <span class="time">4:45</span></div>
-            <div class="band">Fulfilment <span class="time">5:30</span></div>
-            <div class="band">GØØ <span class="time">6:30</span></div>
-            <div class="band"><span class="squished">Bronze Medals</span> <span class="time">7:15</span></div>
-            <div class="band">WACK <span class="time">8:00</span></div>
-            <div class="band">Buddie <span class="time">9:15</span></div>
-            <div class="band">Devours <span class="time">10:00</span></div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Conduit' | slugify }}/">Conduit</a>
+                <span class="time">3:00</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link squished" href="/bands/{{ 'Small Pleasures' | slugify }}/">Small Pleasures</a>
+                <span class="time">4:00</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Sundress' | slugify }}/">Sundress</a>
+                <span class="time">4:45</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Fulfilment' | slugify }}/">Fulfilment</a>
+                <span class="time">5:30</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'GØØ' | slugify }}/">GØØ</a>
+                <span class="time">6:30</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link squished" href="/bands/{{ 'Bronze Medals' | slugify }}/">Bronze Medals</a>
+                <span class="time">7:15</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'WACK' | slugify }}/">WACK</a>
+                <span class="time">8:00</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Buddie' | slugify }}/">Buddie</a>
+                <span class="time">9:15</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link" href="/bands/{{ 'Devours' | slugify }}/">Devours</a>
+                <span class="time">10:00</span>
+            </div>
         </div>
+
         <div class="downstairs">
             <h3>Russian Hall - Downstairs</h3>
-            <div class="band"><span class="squished">Meagan Breanne</span> <span class="time">2:30</span></div>
-            <div class="band"><span class="squished">Grinch Simpson</span> <span class="time">3:45</span></div>
-            <div class="band"><span class="squished">Patrick Farrugia</span> <span class="time">6:15</span></div>
-            <div class="band"><span class="squished">Shore Loser</span> <span class="time">8:45</span></div>
+
+            <div class="band">
+                <a class="band-link squished" href="/bands/{{ 'Meagan Breanne' | slugify }}/">Meagan Breanne</a>
+                <span class="time">2:30</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link squished" href="/bands/{{ 'Grinch Simpson' | slugify }}/">Grinch Simpson</a>
+                <span class="time">3:45</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link squished" href="/bands/{{ 'Patrick Farrugia' | slugify }}/">Patrick Farrugia</a>
+                <span class="time">6:15</span>
+            </div>
+
+            <div class="band">
+                <a class="band-link squished" href="/bands/{{ 'Shore Loser' | slugify }}/">Shore Loser</a>
+                <span class="time">8:45</span>
+            </div>
         </div>
     </div>
 </div>
