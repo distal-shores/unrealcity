@@ -1,5 +1,7 @@
 document.querySelectorAll('a.page-link').forEach(link => {
-    if (link.href === window.location.href) {
+    const normalize = url => url.replace(/\/$/, '');
+
+    if (normalize(link.href) === normalize(window.location.href)) {
         link.classList.add('active');
     }
 });
