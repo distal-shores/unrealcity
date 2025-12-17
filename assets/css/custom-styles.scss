@@ -265,6 +265,11 @@ footer.site-footer {
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35); /* comic drop shadow */
   pointer-events: none;
   z-index: -1;
+  @media screen and (max-width: 600px) {
+    left: 0;
+    right: initial;
+    width: 50%;
+  }
 }
 
 .band-title {
@@ -287,25 +292,7 @@ footer.site-footer {
       color: $secondary;
     }
   }
-
 }
-
-//.band-card {
-//  position: relative;
-//  background-size: cover;
-//  background-position: center;
-//  width: 300px;
-//  height: 300px;
-//  @media screen and (max-width: 600px) {
-//    width: 100vw;
-//    height: calc(100vw - 30px);
-//    .band-frame {
-//      width: 100vw;
-//      height: calc(100vw - 30px);
-//      max-width: 100%;
-//    }
-//  }
-//}
 
 .band-card {
   position: relative;
@@ -385,6 +372,15 @@ footer.site-footer {
     max-width: 100%;
     opacity: 35%;
   }
+}
+
+.band-card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
 }
 
 #schedule {

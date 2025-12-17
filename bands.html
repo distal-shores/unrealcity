@@ -13,7 +13,7 @@ wide: true
         {% if band.headliner %}
         <div class="band-card col-md-6 mb-4" style="background-image:url('/assets/img/band_photos/{{ band.img }}.jpg');">
             <h2 class="band-name headliner">{{ band.name }}</h2>
-            <a href="{{ band.url }}" class="band-link"></a>
+            <a href="{{ band.url }}" class="band-card-link"></a>
         </div>
         {% endif %}
         {% endfor %}
@@ -23,7 +23,7 @@ wide: true
         {% unless band.headliner %}
         <div class="band-card col-md-6 mb-4" style="--img:url('/assets/img/band_photos/{{ band.img }}.jpg'); --y:{{ band.y }}%;">
             <h2 class="band-name">{{ band.name }}</h2>
-            <a href="{{ band.url }}" class="band-link"></a>
+            <a href="{{ band.url }}" class="band-card-link"></a>
         </div>
         {% endunless %}
         {% endfor %}
