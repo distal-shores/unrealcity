@@ -65,6 +65,9 @@ footer.site-footer {
     color: white;
   }
 }
+.post-title {
+  font-family: "cc-thismanthismonster-var", sans-serif;
+}
 .wrapper.wide {
   max-width: calc(1200px - (30px * 2));
 }
@@ -286,8 +289,9 @@ footer.site-footer {
   margin: 0;
   gap: 1.5rem;
   a {
-    font-family: "amatic-sc", sans-serif;
-    font-size: 2rem;
+    font-family: "ccmeanwhile", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
     &:hover {
       color: $secondary;
     }
