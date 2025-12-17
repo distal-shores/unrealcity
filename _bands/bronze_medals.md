@@ -2,7 +2,7 @@
 name: Bronze Medals
 layout: band
 members: ["Hieg (bass)", "Jason (sax)", "Jon (drums)", "Simon (guitar)"]
-genres: ["no wave","jazz fusion","noise"]
+genres: ["no wave","jazz fusion","noise rock"]
 ffo: ["Faraquet","Horse Lords","Tortoise"]
 img: bronze_medals
 instagram: bronzemedalsbc

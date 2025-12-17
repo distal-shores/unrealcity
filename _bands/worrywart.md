@@ -2,7 +2,7 @@
 name: worrywart
 layout: band
 members: ["Ryley Epp (guitar, vox)", "Ally Von Wallis (bass, synth, vox)", "Syd Thorne (vox,aux)", "Matt Thompson (guitar)", "M O'Brian (drums)"]
-genres: ["anxiety rock","art punk"]
+genres: ["alternative","art rock","powerpop","punk"]
 ffo: ["Sparklehorse","My Chemical Romance"]
 img: worrywart
 instagram: bigsillyworrywart

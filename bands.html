@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Bands
 permalink: /bands/
 page_id: "bands"
@@ -7,11 +7,18 @@ wide: true
 ---
 
 <div class="container">
+    <div class="band-filter-bar">
+        <label for="band-genre-filter" class="band-filter-label">Filter by genre</label>
+        <select id="band-genre-filter" class="band-filter-select">
+            <option value="">All genres</option>
+        </select>
+    </div>
+    <p id="band-filter-empty" class="band-filter-empty" hidden>No bands match that genre.</p>
     <div class="row gap-3 justify-content-center" id="band-container">
         <!-- Display headliner bands first -->
         {% for band in site.bands %}
         {% if band.headliner %}
-        <div class="band-card col-md-6 mb-4" style="background-image:url('/assets/img/band_photos/{{ band.img }}.jpg');">
+        <div class="band-card col-md-6 mb-4" data-genres='{{ band.genres | jsonify }}' style="background-image:url('/assets/img/band_photos/{{ band.img }}.jpg');">
             <h2 class="band-name headliner">{{ band.name }}</h2>
             <a href="{{ band.url }}" class="band-card-link"></a>
         </div>
@@ -21,7 +28,7 @@ wide: true
         <!-- Then display the remaining bands -->
         {% for band in site.bands %}
         {% unless band.headliner %}
-        <div class="band-card col-md-6 mb-4" style="--img:url('/assets/img/band_photos/{{ band.img }}.jpg'); --y:{{ band.y }}%;">
+        <div class="band-card col-md-6 mb-2 mb-md-4" data-genres='{{ band.genres | jsonify }}' style="--img:url('/assets/img/band_photos/{{ band.img }}.jpg'); --y:{{ band.y }}%;">
             <h2 class="band-name">{{ band.name }}</h2>
             <a href="{{ band.url }}" class="band-card-link"></a>
         </div>

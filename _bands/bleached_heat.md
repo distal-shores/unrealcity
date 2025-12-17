@@ -2,7 +2,7 @@
 name: Bleached Heat
 layout: band
 members: ["Stevie (guitar, vocals, synths, sampler)"]
-genres: ["industrial","goth","italo disco"]
+genres: ["industrial","goth","electronic"]
 ffo: ["New Order","Lowlife","Boy Harsher"]
 img: bleached_heat
 instagram: bleachedheat

@@ -2,7 +2,7 @@
 name: Bloom Effect
 layout: band
 members: ["Jula Lafit (bass, vocals)","Craig Weighman (guitars, vocals)","Tom Rappa (drums)"]
-genres: ["shoegaze","dream pop"]
+genres: ["shoegaze","dream pop","goth"]
 ffo: ["Cocteau Twins","Alvvays","A Flock of Seagulls"]
 img: bloom_effect
 instagram: bloomeffectband

@@ -18,6 +18,10 @@
 {%- include footer.html -%}
 
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+{%- if page.page_id == "bands" -%}
+<script src="{{ '/assets/js/bands-filter.config.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/bands-filter.js' | relative_url }}" defer></script>
+{%- endif -%}
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 name: Phuture Memoriez
 layout: band
 members: ["Jessica Blaquiere (keyboard)", "Tylor David (guitar), Ryan (vocals, guitar, drum sampler)"]
-genres: ["noise pop","synth punk",]
+genres: ["electronic","synth punk","goth"]
 ffo: ["Planet B","Odonis Odonis","Brittney Spears"]
 img: phuture_memoriez
 instagram: phuturememoriez

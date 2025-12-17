@@ -2,7 +2,7 @@
 name: By A Thread
 layout: band
 members: ["John Franco (vocals/guitar)","Sean Lande (guitar)","Gabe Mantle (drums/vocals)","Carl McBeat (bass/vocals)"]
-genres: ["post-hardcore"]
+genres: ["post-hardcore","punk"]
 ffo: ["Sunny Day Real Estate","Jawbreaker","Quicksand"]
 img: by_a_thread
 instagram: byathreadofficial

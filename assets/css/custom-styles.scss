@@ -45,6 +45,40 @@ a {
   max-width: 940px;
   margin: 0 auto;
 }
+
+#bands {
+  .container {
+    padding: 0;
+    .row {
+      --bs-gutter-x: 0 !important;
+    }
+  }
+}
+
+.band-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+}
+
+.band-filter-label {
+  font-family: "ccmeanwhile", sans-serif;
+  font-weight: 700;
+}
+
+.band-filter-select {
+  background: transparent;
+  border: 2px solid $teal;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  min-width: 180px;
+}
+
+.band-filter-empty {
+  margin: 0 0 1rem;
+  font-family: "ccmeanwhile", sans-serif;
+}
 #faq {
   h3 {
     color: $teal;
@@ -194,7 +228,6 @@ footer.site-footer {
       }
     }
     .logo {
-      width: 150px;
       padding: 1rem 0;
     }
     .nav {
@@ -215,21 +248,6 @@ footer.site-footer {
       }
         .page-link.bang::before {
         top: 1px;
-      }
-    }
-  }
-  @media screen and (max-width: 400px) {
-    .nav-item {
-      .page-link {
-        font-size: 1.25rem;
-        &.bang {
-          &::before {
-            height: 53px;
-            width: 116%;
-            left: -11%;
-            top: -3px;
-          }
-        }
       }
     }
   }
@@ -291,6 +309,9 @@ footer.site-footer {
   a {
     font-family: "ccmeanwhile", sans-serif;
     font-size: 1.5rem;
+    @media screen and (max-width: 600px) {
+      font-size: 1rem;
+    }
     font-weight: 700;
     &:hover {
       color: $secondary;

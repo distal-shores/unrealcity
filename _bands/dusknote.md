@@ -2,7 +2,7 @@
 name: Dusknote
 layout: band
 members: ["Adam Parent (guitar, vocals)","Dan Ponich (guitar, synth)","Justin Trueman (bass, vocals)","Connor Mead (drums, vocals)"]
-genres: ["indie","experimental","psychedelic"]
+genres: ["indie","experimental","psychedelic","dance rock"]
 ffo: ["Unknown Mortal Orchestra","Amen Dunes","Tame Impala"]
 img: dusknote
 instagram: dusknote

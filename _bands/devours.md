@@ -2,7 +2,7 @@
 name: Devours
 layout: band
 members: ["Jeff Cancade (synth, vocals)", "David Prowse (drums)"]
-genres: ["electronic","homopop","synth"]
+genres: ["electronic","goth","alternative","synth punk"]
 ffo: ["Model/Actriz","Black Marble","TR/ST"]
 img: devours
 instagram: devours.ufo
