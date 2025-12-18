@@ -1,6 +1,8 @@
 ---
 name: WACK
 layout: band
+location: Vancouver
+when: saturday
 members: ["Rodo Merin (bass)","Michael Wadham (drums)", "Pasang Galay (vocals, keys, percussion, guitar)", "Marie Catafesta (guitar, vocals)","Eduardo Abarca (percussion)"]
 genres: ["experimental rock","psychedelic","dance rock"]
 ffo: ["Pond","Freak Heat Waves","Jagwar Ma"]

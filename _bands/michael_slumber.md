@@ -1,6 +1,8 @@
 ---
 name: Michael Slumber
 layout: band
+location: Vancouver
+when: friday
 members: ["Michael Brown (vocals)", "Jody Glenham (keys)", "Bill Rohla (bass)", "David Prowse (drums)"]
 genres: ["indie","dark folk","singer-songwriter"]
 ffo: ["Nick Cave","The Veils","PJ Harvey"]

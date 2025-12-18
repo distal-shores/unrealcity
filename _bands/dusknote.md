@@ -1,6 +1,8 @@
 ---
 name: Dusknote
 layout: band
+location: Vancouver
+when: thursday
 members: ["Adam Parent (guitar, vocals)","Dan Ponich (guitar, synth)","Justin Trueman (bass, vocals)","Connor Mead (drums, vocals)"]
 genres: ["indie","experimental","psychedelic","dance rock"]
 ffo: ["Unknown Mortal Orchestra","Amen Dunes","Tame Impala"]

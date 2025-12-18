@@ -1,6 +1,8 @@
 ---
 name: Disruptions
 layout: band
+location: Vancouver
+when: thursday
 members: ["Shannon (bass)","Jesse (guitar)","Joe (drums)","Johnny (vocals, noise)"]
 genres: ["noise rock","hardcore","post-hardcore"]
 ffo: ["Flipper","Sonic Youth","The Jesus Lizard"]

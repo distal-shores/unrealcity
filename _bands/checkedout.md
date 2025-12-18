@@ -1,12 +1,14 @@
 ---
 name: checkedout
 layout: band
+location: Vancouver
+when: friday
 members: ["Adam Bruce (bass)", "Clayton Ikuta (guitar, vocals)", "Emma Wetherill (guitar, vocals)", "Jacob Lamour (drums)"]
 genres: ["punk","alternative"]
 ffo: ["Hotline TNT","Weed","Happy Diving"]
 img: checkedout
 instagram: headcheckedout
-spotify: NA
+spotify: 5MppGcs4q1kdfISf0lf2CS
 bandcamp: mediumgoodrecords
 y: 31
 ---

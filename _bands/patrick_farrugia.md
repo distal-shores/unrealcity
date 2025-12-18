@@ -1,6 +1,8 @@
 ---
 name: Patrick Farrugia
 layout: band
+location: Vancouver
+when: saturday
 members: ["Patrick Farrugia (singer, guitarist)"]
 genres: ["dream pop","alternative","indie"]
 ffo: ["The Beatles","Elliott Smith","Enter Shikari"]

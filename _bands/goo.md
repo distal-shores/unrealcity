@@ -1,12 +1,13 @@
 ---
 name: GØØ
 layout: band
+location: Vancouver
+when: saturday
 members: ["Kellan (vocals/guitar/sampler)", "Eric (bass), Ryan (drums)"]
 genres: ["alternative","shoegaze","grunge"]
 ffo: ["Smashing Pumpkins","Deftones","Chevelle"]
 img: goo
 instagram: goo.band
-spotify: 1ovdEAuUAKWEA8XEQAL5yI
 bandcamp: goobandyvr
 y: 42
 ---

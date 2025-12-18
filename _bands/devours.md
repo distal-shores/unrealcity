@@ -1,12 +1,14 @@
 ---
 name: Devours
 layout: band
+location: Vancouver
+when: saturday
 members: ["Jeff Cancade (synth, vocals)", "David Prowse (drums)"]
 genres: ["electronic","goth","alternative","synth punk"]
 ffo: ["Model/Actriz","Black Marble","TR/ST"]
 img: devours
 instagram: devours.ufo
-spotify: 4M14cEdw4Jw6VyspSQpESw
+spotify: 1naaQv78Dwzc6iwCNRUWTb
 bandcamp: devours
 y: 32
 ---

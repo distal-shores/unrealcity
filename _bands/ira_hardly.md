@@ -1,6 +1,8 @@
 ---
 name: Ira Hardly
 layout: band
+location: Vancouver
+when: friday
 members: ["Ira Hardy (guitar, vocals)","Andrew Mazerolle (bass, vocals)","Cass Picken (guitar)","Jeff Carter (drums)"]
 genres: ["freak folk","indie"]
 ffo: ["MJ Lenderman","Silver Jews","Pavement"]

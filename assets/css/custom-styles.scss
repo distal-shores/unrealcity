@@ -67,6 +67,14 @@ a {
   font-weight: 700;
 }
 
+.band-ticket-link a {
+  color: lighten($secondary, 10%);
+}
+
+.line-heading {
+  font-family: "ccmeanwhile", sans-serif;
+}
+
 .band-filter-select {
   background: transparent;
   border: 2px solid $teal;
@@ -77,6 +85,11 @@ a {
 
 .band-filter-empty {
   margin: 0 0 1rem;
+  font-family: "ccmeanwhile", sans-serif;
+}
+
+.band-tickets {
+  margin: 0.75rem 0;
   font-family: "ccmeanwhile", sans-serif;
 }
 #faq {

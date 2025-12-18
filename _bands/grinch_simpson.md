@@ -1,6 +1,8 @@
 ---
 name: Grinch Simpson
 layout: band
+location: Vancouver
+when: saturday
 members: ["Cam Nelson (guitar, vocals)", "Marie Catafesta (guitar, vocals)", "Jeremy Krenbrink (bass)"]
 genres: ["garage rock","folk","freak folk"]
 ffo: ["Parquet Courts","Pearl Jam"]

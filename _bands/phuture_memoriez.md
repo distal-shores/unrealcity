@@ -1,6 +1,8 @@
 ---
 name: Phuture Memoriez
 layout: band
+location: Vancouver
+when: friday
 members: ["Jessica Blaquiere (keyboard)", "Tylor David (guitar), Ryan (vocals, guitar, drum sampler)"]
 genres: ["electronic","synth punk","goth"]
 ffo: ["Planet B","Odonis Odonis","Brittney Spears"]

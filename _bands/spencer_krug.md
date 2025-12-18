@@ -1,6 +1,8 @@
 ---
 name: Spencer Krug
 layout: band
+location: Vancouver Island
+when: friday
 members: ["Spencer Krug (piano, vocals)", "Jordan Koop (guitar)"]
 genres: ["indie","alternative"]
 ffo: ["Wolf Parade","Sunset Rubdown", "Moonface"]

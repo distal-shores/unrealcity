@@ -1,6 +1,8 @@
 ---
 name: By A Thread
 layout: band
+location: Vancouver
+when: thursday
 members: ["John Franco (vocals/guitar)","Sean Lande (guitar)","Gabe Mantle (drums/vocals)","Carl McBeat (bass/vocals)"]
 genres: ["post-hardcore","punk"]
 ffo: ["Sunny Day Real Estate","Jawbreaker","Quicksand"]

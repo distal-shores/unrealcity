@@ -1,6 +1,8 @@
 ---
 name: Hillsboro
 layout: band
+location: Vancouver, Victoria
+when: thursday
 members: ["Nima Walker (vocals, guitar)","Sam Wells (guitar)","Oliver Hollingshead (drums)","Dexter Hodgins (violin)", "Layten Kramer (bass)"]
 genres: ["emo","indie","alternative"]
 ffo: ["Deftones","Title Fight","Bloc Party"]

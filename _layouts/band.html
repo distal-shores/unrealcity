@@ -35,10 +35,26 @@ layout: default
         </div>
 
         <div class="post-content e-content" itemprop="articleBody">
-            <div class="pt-1">
-                <p>Members: {% for member in page.members %} {{ member }}{% if forloop.last == false %}, {% endif %} {% endfor %}</p>
-                <p>Genres: {% for genre in page.genres %} {{ genre | capitalize }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
-                <p>For Fans Of: {% for fo in page.ffo %} {{ fo }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+            <p class="pt-1">
+                {% if page.when %}
+                {% assign show_day = page.when | downcase %}
+                {% if show_day == "thursday" %}
+                {% assign ticket_url = "https://www.eventbrite.ca/e/unreal-city-festival-night-one-tickets-1974943770983" %}
+                {% assign venue = "Rickshaw Theatre" %}
+                {% elsif show_day == "friday" or show_day == "saturday" %}
+                {% assign ticket_url = "https://tickets.unrealcity.rocks" %}
+                {% assign venue = "Russian Hall" %}
+                {% endif %}
+                {% if ticket_url and venue %}
+                <p class="band-ticket-link">
+                    <span class="line-heading">See Them:</span> <a href="{{ ticket_url }}">{{ page.when | capitalize }} at {{ venue }}</a>
+                </p>
+                {% endif %}
+                {% endif %}
+                <p><span class="line-heading">Location:</span> {{ page.location }}</p>
+                <p><span class="line-heading">Members:</span> {% for member in page.members %} {{ member }}{% if forloop.last == false %}, {% endif %} {% endfor %}</p>
+                <p><span class="line-heading">Genres:</span> {% for genre in page.genres %} {{ genre | capitalize }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+                <p><span class="line-heading">For Fans Of:</span> {% for fo in page.ffo %} {{ fo }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
                 {{ content }}
             </div>
         </div>

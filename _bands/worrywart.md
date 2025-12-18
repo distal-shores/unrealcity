@@ -1,6 +1,8 @@
 ---
 name: worrywart
 layout: band
+location: Vancouver
+when: friday
 members: ["Ryley Epp (guitar, vox)", "Ally Von Wallis (bass, synth, vox)", "Syd Thorne (vox,aux)", "Matt Thompson (guitar)", "M O'Brian (drums)"]
 genres: ["alternative","art rock","powerpop","punk"]
 ffo: ["Sparklehorse","My Chemical Romance"]

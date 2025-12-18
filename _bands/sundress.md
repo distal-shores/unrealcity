@@ -1,6 +1,8 @@
 ---
 name: Sundress
 layout: band
+location: Vancouver
+when: saturday
 members: ["Grey (drums)", "Shaia (guitar, backing vocals)", "Sy (vocals)", "Zoe (bass)"]
 genres: ["no wave","post-punk","noise rock"]
 ffo: ["Nothing","Sonic Youth","Mannequin Pussy"]

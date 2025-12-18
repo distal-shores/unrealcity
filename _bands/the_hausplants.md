@@ -1,6 +1,8 @@
 ---
 name: The Hausplants
 layout: band
+location: Vancouver
+when: thursday
 members: ["Amir (guitar, backing vocals)","Sondor (drums)", "Zel (vocals, bass)"]
 genres: ["post-punk","experimental rock","powerpop"]
 ffo: ["Saint Vincent","Vampire Weekend","Radiohead"]

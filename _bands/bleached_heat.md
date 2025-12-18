@@ -1,6 +1,8 @@
 ---
 name: Bleached Heat
 layout: band
+location: Vancouver
+when: friday
 members: ["Stevie (guitar, vocals, synths, sampler)"]
 genres: ["industrial","goth","electronic"]
 ffo: ["New Order","Lowlife","Boy Harsher"]

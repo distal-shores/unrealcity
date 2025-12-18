@@ -1,6 +1,8 @@
 ---
 name: Conduit
 layout: band
+location: Vancouver
+when: saturday
 members: ["James Stewart (vocals, guitar)", "Jason Stevenson (bass,vocals)", "Luke Nixon (drums)"]
 genres: ["punk","post hardcore","post-punk"]
 ffo: ["Wipers","Hot Snakes","Pavement"]

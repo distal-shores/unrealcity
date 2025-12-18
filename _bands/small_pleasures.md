@@ -1,6 +1,8 @@
 ---
 name: Small Pleasures
 layout: band
+location: Victoria
+when: saturday
 members: ["Nevada (drums, vocals, sample pad)", "Viny (bass, vocals)"]
 genres: ["post-punk","indie"]
 ffo: ["Sonic Youth", "A Place To Bury Strangers"]
