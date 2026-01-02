@@ -13,4 +13,6 @@ bandcamp: phuturememoriez1
 y: 57
 ---
 
-More info coming soon.
+Absurdist tech-rockers Phuture Memoriez evoke Devo and other performative confrontationalists, but even beyond this interesting affect there is a dedication to cohesive, project-level songwriting underpinning the project. Recently released The Greatest Jockey Of All Time demonstrates the band’s continued development, showcasing offbeat hooks and rhythms that construct a deranged world all their own.
+
+On stage, the three-piece use an array of instrumentation and tools to bring their creations to life, a trio of mad sonic scientists. 
