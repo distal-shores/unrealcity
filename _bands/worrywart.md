@@ -10,7 +10,7 @@ img: worrywart
 instagram: bigsillyworrywart
 spotify: 5MNXqLFwZVu4kYARvH712i
 bandcamp: worrywart
-y: 50
+y: 17
 ---
 
 worrywart blossoms from friendship, stitched tight in stretching the edges of sounds that attached them to music in the first place. Making noise for queer love and celebrating tender explorations of anxiety - they bring a sparkling grunge energy to performances. Their dynamics on stage demonstrate a clear commitment to making every show electric and memorable for everyone they share space with.
