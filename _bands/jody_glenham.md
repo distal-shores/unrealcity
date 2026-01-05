@@ -17,4 +17,4 @@ For many years, Jody Glenham has been documenting the rhythms of often challengi
 
 Musically, the many timbres and arrangement choices of her compositions match this multifaceted subject matter, with regular bandmates Mike Brown and Adam Fink nimbly working out the nuanced-but-palatable parts and giving Jody's vocal, keys and guitar work ample room to breathe. 
 
-Jody graces our Saturday, January 17 stage at Russian Hall with a set as smooth and intoxicating as a finely crafted cocktail.
+Jody graces our Friday, January 16 stage at Russian Hall with a set as smooth and intoxicating as a finely crafted cocktail.
