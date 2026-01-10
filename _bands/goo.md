@@ -8,7 +8,7 @@ genres: ["alternative","shoegaze","grunge"]
 ffo: ["Smashing Pumpkins","Deftones","Chevelle"]
 img: goo
 instagram: goo.band
-bandcamp: goobandyvr
+bandcamp: goobandvancouver
 y: 42
 ---
 
