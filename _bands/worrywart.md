@@ -13,5 +13,8 @@ bandcamp: worrywart
 y: 17
 ---
 
-worrywart blossoms from friendship, stitched tight in stretching the edges of sounds that attached them to music in the first place. Making noise for queer love and celebrating tender explorations of anxiety - they bring a sparkling grunge energy to performances. Their dynamics on stage demonstrate a clear commitment to making every show electric and memorable for everyone they share space with.
-worrywart urges you to dance in spiteful joy, and hold your people through the collapse. Xoxo
+worrywart are back!
+
+Your five favourite best friends make music that is truly undefinable, where emotionally-charged, ecstatic shows of force give way to glass-fragile displays of vulnerability. 2024's Hail Mary Baby was one of the best records to come out of not only the scene, but the whole damn country, a self-made, mind-bending diaspora of technical daring and elaborate-but-never-overwrought songwriting.
+
+This writer's mind melts at the prospect of trying to bring those songs to life live, but the band seems never to have batted an eye at the prospect, realizing every woozy tape stutter and ambitious jazz-inflected chord while proving that sometimes, more really is more.
