@@ -1,0 +1,209 @@
+/* ===== Press page ===== */
+
+.press-page {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.press-intro {
+  margin: 1.25rem 0 2rem;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.press-kicker {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.press-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.press-action {
+  display: inline-block;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 2px solid $teal;
+  color: $teal;
+  font-family: "ccmeanwhile", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+
+  &:hover {
+    color: $secondary;
+    border-color: $secondary;
+  }
+
+}
+
+/* Featured / highlights */
+
+.press-featured {
+  margin: 2rem 0 2.25rem;
+
+  h2 {
+    font-family: "cc-thismanthismonster-var", sans-serif;
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.press-featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media (min-width: 820px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.press-quote-card {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 14px;
+  padding: 1rem 1rem 0.9rem;
+  background: $offwhite;
+
+  /* zine-ish “lift” */
+  box-shadow: 0 6px 0 $secondary;
+
+  blockquote {
+    margin: 0 0 0.85rem;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    border-left: 4px solid lighten($secondary, 15%);
+  }
+
+  .press-quote-meta {
+    display: grid;
+    gap: 0.35rem;
+  }
+}
+
+/* Archive */
+
+.press-archive {
+  margin: 2rem 0 3rem;
+
+  h2 {
+    font-family: "cc-thismanthismonster-var", sans-serif;
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.press-year {
+  margin: 1.75rem 0 0.75rem;
+  padding-top: 0.85rem;
+  border-top: 3px solid rgba(0, 0, 0, 0.12);
+  font-family: "ccmeanwhile", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: $black;
+}
+
+.press-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.press-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  padding: 0.95rem 0;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.18);
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.press-item-main {
+  min-width: 0; /* prevent overflow */
+}
+
+.press-outlet {
+  display: inline-block;
+  font-family: "ccmeanwhile", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: $black;
+  margin-right: 0.5rem;
+  position: relative;
+
+  /* stamp underline */
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    border-radius: 999px;
+    margin-top: 2px;
+    opacity: 0.9;
+  }
+}
+
+.press-title {
+  font-family: "source-sans-pro", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-word;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  /* small external-link vibe without needing an icon */
+  &::after {
+    content: " ↗";
+    opacity: 0.65;
+    font-weight: 700;
+  }
+}
+
+.press-date {
+  white-space: nowrap;
+  opacity: 0.75;
+  font-size: 0.95rem;
+  font-family: "ccmeanwhile", sans-serif;
+  font-weight: 400;
+
+  @media (max-width: 680px) {
+    white-space: normal;
+  }
+}
+
+.press-quote-snippet {
+  margin-top: 0.45rem;
+  font-style: italic;
+  opacity: 0.9;
+  max-width: 70ch;
+}
+
+/* Optional: if you ever add type tags later */
+.press-tag {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  background: rgba(0,0,0,0.05);
+  font-family: "ccmeanwhile", sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}

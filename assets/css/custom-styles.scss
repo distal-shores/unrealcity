@@ -226,19 +226,8 @@ footer.site-footer {
       right: initial;
       background-color: transparent;
       border: none;
-      text-align: initial;
+      text-align: center;
       margin: 0 auto;
-      .nav-item:nth-child(4),
-      .nav-item:nth-child(5) {
-        min-width: 45%;
-        text-align: center;
-      }
-      .nav-item:nth-child(4) {
-        text-align: right;
-      }
-      .nav-item:nth-child(5) {
-        text-align: left;
-      }
     }
     .logo {
       padding: 1rem 0;
@@ -746,3 +735,5 @@ footer.site-footer {
 .help-toggle:hover {
   background-color: darken($gray, 10%);
 }
+
+@import "press";
