@@ -37,3 +37,25 @@
   outlet: Georgia Straight
   title: "How Heated Rivalry taught Spencer Krug to believe in anything"
   url: "https://www.straight.com/music/how-heated-rivalry-taught-spencer-krug-to-believe-in-anything"
+- date: 2026-01-26
+  outlet: Ubyssey
+  title: "Unreal City Festival warms up another winter for independent artists"
+  url: "https://ubyssey.ca/culture/unreal-city-festival-another-winter/"
+  quote: "Despite the small size [...] the scale of the festival’s offerings are impressive."
+  featured: true
+- date: 2026-02-19
+  outlet: The Grape Vinyl
+  title: "An Unreal Weekend: Part One"
+  url: "https://grape-vinyl.com/2026/02/19/an-unreal-weekend-part-one/"
+  quote: "Regardless, with the support of DIY fans eager to hop aboard a brand-new event during one of the most depressing months of the year for “No Fun City”, the result was a resounding success."
+- date: 2026-02-19
+  outlet: The Grape Vinyl
+  title: "An Unreal Weekend: Part Two"
+  url: "https://grape-vinyl.com/2026/02/19/an-unreal-weekend-part-two/"
+  quote: "It was good to be back at Russian Hall. Less prestige than a theatre maybe, but there’s something about a community hall that feels right for a festival so heavily steeped in, well, community: no cops paroling the area, no bouncers stationed outside the door, no tiered seats sectioning off the room. On the open floor people mingled and danced and said hello to friends, ebbing and flowing in and out of the room, upstairs and down and back up again."
+- date: 2026-02-19
+  outlet: The Grape Vinyl
+  title: "An Unreal Weekend: Part Three"
+  url: "https://grape-vinyl.com/2026/02/19/an-unreal-weekend-part-three/"
+  quote: "The final day of Unreal City Festival 2026 was not for the faint of heart. With food, drinks, tattoos, tarot, and about eight solid hours of music—sometimes in two places at once between the main stage and downstairs—there was much to experience for those determined (and in my case unemployed) enough to brave the day from start to finish."
+  featured: true
