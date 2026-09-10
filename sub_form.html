@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Unreal City 2026 Application Form
+title: Unreal City 2027 Application Form
 permalink: /2027-artist-app/
 ---
 
 <div class="form-container">
     <h1 class="form-title">Unreal City 2027 Application Form</h1>
-    <p>Unreal City 2026 takes place February 25-27 at Russian Hall in K'emk'emeláy/Vancouver.</p>
+    <p>Unreal City 2027 takes place February 25-27 at Russian Hall in K'emk'emeláy/Vancouver.</p>
     <p class="coral">Submissions close October 14, 2026.</p>
 
-    <form id="unreal-city-form">
+    <form id="unreal-city-form" novalidate>
         <div class="form-group">
             <label for="bandName">Artist name <span class="required">*</span></label>
             <input type="text" id="bandName" name="bandName" required>
@@ -60,16 +60,23 @@ permalink: /2027-artist-app/
             <input type="text" id="similarBands" name="similarBands">
         </div>
 
-        <div class="form-group">
-            <label for="songLink1">Song link 1<br></label>
-            <input type="url" id="songLink1" name="songLink1">
-            <span class="small">If your music is on a major streaming platform as indicated above, you don't need to fill this field out.</span>
+        <div class="section-divider">
+            <div class="section-note">
+                For the following two questions, provide us a link to something we can download. (MP3s preferred.) If you're using Google Drive or similar, PLEASE set share access to public or grant access to unrealcityfest@gmail.com
+            </div>
+            <div class="section-note">
+                Please do not use Bandcamp links here as they are not easily downloadable. SoundCloud is better as long as the files are set to be publicly downloadable.
+            </div>
         </div>
 
         <div class="form-group">
-            <label for="songLink2">Song link 2<br></label>
-            <input type="url" id="songLink2" name="songLink2">
-            <span class="small">If your music is on a major streaming platform as indicated above, you don't need to fill this field out.</span>
+            <label for="songLink1">Song link 1 <span class="required">*</span></label>
+            <input type="url" id="songLink1" name="songLink1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="songLink2">Song link 2 <span class="required">*</span></label>
+            <input type="url" id="songLink2" name="songLink2" required>
         </div>
 
         <div class="form-group">
@@ -83,7 +90,7 @@ permalink: /2027-artist-app/
                 <input type="checkbox" id="recentOrUpcomingvideo" name="recentOrUpcomingvideo">
                 <label for="recentOrUpcomingvideo">Yes</label>
             </div>
-            <span class="small">Note: the above question is for our planning purposes only, if your application is successful you will have a chance to share it with us later. This question will not factor into our programming decision-making.</span>
+            <span class="small">Note: the above question is for our planning purposes only, if your application is successful you will have a chance to share it with us later. This question will not factor into our program decision-making.</span>
         </div>
 
         <div class="form-group">
@@ -122,25 +129,20 @@ permalink: /2027-artist-app/
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" id="diversity-middle-eastern-west-asian" name="diversity" value="Middle Eastern / West Asian">
-                <label for="diversity-middle-eastern-west-asian">Middle Eastern / West Asian</label>
+                <label for="diversity-middle-eastern-west-asian">West Asian ("Middle Eastern")</label>
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" id="diversity-latin-american" name="diversity" value="Latin American">
-                <label for="diversity-latin-american">Latin American</label>
+                <label for="diversity-latin-american">Latinx</label>
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" id="diversity-another-racialized-community" name="diversity" value="Another racialized community">
-                <label for="diversity-another-racialized-community">Another racialized community</label>
+                <label for="diversity-another-racialized-community">Another community (tell us more, if you want)</label>
             </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="diversity-none" name="diversity" value="None of the above">
-                <label for="diversity-none">None of the above</label>
+            <div id="diversity-other-field" class="conditional-text-field" hidden>
+                <label for="diversity-other-details">Tell us more <span class="optional">(optional)</span></label>
+                <input type="text" id="diversity-other-details" name="diversityOther" disabled>
             </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="diversity-prefer-not-to-answer" name="diversity" value="Prefer not to answer">
-                <label for="diversity-prefer-not-to-answer">Prefer not to answer</label>
-            </div>
-            <span class="small"><em>Select all that apply.</em></span>
         </fieldset>
 
         <fieldset class="form-group multi-select-group">
@@ -148,7 +150,7 @@ permalink: /2027-artist-app/
             <span class="small multi-select-instructions"><em>Select all that apply. This information is optional and helps us support diversity in our programming.</em></span>
             <div class="checkbox-group">
                 <input type="checkbox" id="lgbtq-queer" name="lgbtq" value="LGBTQ+ / Queer">
-                <label for="lgbtq-queer">LGBTQ+ / Queer</label>
+                <label for="lgbtq-queer">LGBTQ+</label>
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" id="lgbtq-transgender" name="lgbtq" value="Transgender">
@@ -156,7 +158,7 @@ permalink: /2027-artist-app/
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" id="lgbtq-non-binary" name="lgbtq" value="Non-binary / gender-diverse">
-                <label for="lgbtq-non-binary">Non-binary / gender-diverse</label>
+                <label for="lgbtq-non-binary">Non-binary</label>
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" id="lgbtq-two-spirit" name="lgbtq" value="Two-Spirit">
@@ -182,16 +184,57 @@ permalink: /2027-artist-app/
         e.preventDefault();
 
         // Clear previous errors
-        document.querySelectorAll('.error-field').forEach(field => {
-            field.classList.remove('error-field');
+        this.querySelectorAll('input, textarea').forEach(field => {
+            clearFieldError(field);
         });
-        document.querySelectorAll('.error-message').forEach(msg => {
-            msg.remove();
+
+        const statusDiv = document.getElementById('form-status');
+        const submitBtn = document.querySelector('.submit-btn');
+        statusDiv.style.display = 'none';
+
+        const invalidFields = [];
+        const requiredFields = {
+            bandName: 'Please enter an artist name.',
+            contactEmail: 'Please enter a contact email.',
+            bandMembers: 'Please list the artist members and their roles.',
+            location: 'Please enter a location.',
+            songLink1: 'Please provide the first song link.',
+            songLink2: 'Please provide the second song link.'
+        };
+
+        Object.entries(requiredFields).forEach(([fieldName, message]) => {
+            const field = document.getElementById(fieldName);
+            if (!field.value.trim()) {
+                showFieldError(field, message);
+                invalidFields.push(field);
+            }
         });
+
+        const contactEmail = document.getElementById('contactEmail');
+        if (contactEmail.value && contactEmail.validity.typeMismatch) {
+            showFieldError(contactEmail, 'Please enter a valid email address.');
+            invalidFields.push(contactEmail);
+        }
+
+        document.querySelectorAll('input[type="url"]').forEach(field => {
+            if (field.value && !isValidUrl(field.value)) {
+                showFieldError(field, 'Please enter a valid URL (for example, https://example.com).');
+                invalidFields.push(field);
+            }
+        });
+
+        if (invalidFields.length > 0) {
+            statusDiv.textContent = 'Please correct the highlighted fields and try again.';
+            statusDiv.className = 'form-status error';
+            statusDiv.style.display = 'block';
+            invalidFields[0].focus();
+            return;
+        }
 
         const formData = new FormData(this);
         const data = {};
         const diversitySelections = formData.getAll('diversity');
+        const diversityOtherDetails = (formData.get('diversityOther') || '').trim();
         const lgbtqSelections = formData.getAll('lgbtq');
         const lgbtqOtherDetails = (formData.get('lgbtqOther') || '').trim();
 
@@ -199,14 +242,18 @@ permalink: /2027-artist-app/
         for (let [key, value] of formData.entries()) {
             if (key === 'recentOrUpcomingvideo') {
                 data[key] = true; // checkbox is checked if present
-            } else if (key === 'diversity' || key === 'lgbtq' || key === 'lgbtqOther') {
+            } else if (key === 'diversity' || key === 'diversityOther' || key === 'lgbtq' || key === 'lgbtqOther') {
                 continue; // handled below so all selected values are retained
             } else {
                 data[key] = value.trim();
             }
         }
 
-        data.diversity = diversitySelections.join(', ');
+        data.diversity = diversitySelections
+            .map(value => value === 'Another racialized community' && diversityOtherDetails
+                ? `${value}: ${diversityOtherDetails}`
+                : value)
+            .join(', ');
         data.lgbtq = lgbtqSelections
             .map(value => value === 'Other' && lgbtqOtherDetails ? `Other: ${lgbtqOtherDetails}` : value)
             .join(', ');
@@ -216,27 +263,8 @@ permalink: /2027-artist-app/
             data.recentOrUpcomingvideo = false;
         }
 
-        const statusDiv = document.getElementById('form-status');
-        const submitBtn = document.querySelector('.submit-btn');
-
-        // Song links are only required when no streaming-service link is supplied.
-        const missingSongLinks = data.spotify || data.bandcamp
-            ? []
-            : ['songLink1', 'songLink2'].filter(fieldName => !data[fieldName]);
-
-        if (missingSongLinks.length > 0) {
-            missingSongLinks.forEach(fieldName => {
-                document.getElementById(fieldName).classList.add('error-field');
-            });
-            statusDiv.textContent = 'Please provide both song links, or add a Spotify, Bandcamp, or other streaming-service link.';
-            statusDiv.className = 'form-status error';
-            statusDiv.style.display = 'block';
-            document.getElementById(missingSongLinks[0]).focus();
-            return;
-        }
-
         // Show loading state
-        statusDiv.innerHTML = 'Submitting your application...';
+        statusDiv.textContent = 'Submitting your application...';
         statusDiv.className = 'form-status loading';
         statusDiv.style.display = 'block';
         submitBtn.disabled = true;
@@ -267,7 +295,7 @@ permalink: /2027-artist-app/
                     missingFields.forEach(fieldName => {
                         const field = document.getElementById(fieldName);
                         if (field && (!data[fieldName] || data[fieldName] === '')) {
-                            field.classList.add('error-field');
+                            showFieldError(field, 'This field is required.');
                         }
                     });
                 } else {
@@ -288,24 +316,39 @@ permalink: /2027-artist-app/
     document.querySelectorAll('input[type="url"]').forEach(input => {
         input.addEventListener('blur', function() {
             if (this.value && !isValidUrl(this.value)) {
-                this.classList.add('error-field');
-
-                // Remove existing error message
-                const existingError = this.parentNode.querySelector('.error-message');
-                if (existingError) existingError.remove();
-
-                // Add error message
-                const errorMsg = document.createElement('div');
-                errorMsg.className = 'error-message';
-                errorMsg.textContent = 'Please enter a valid URL (e.g., https://example.com)';
-                this.parentNode.appendChild(errorMsg);
+                showFieldError(this, 'Please enter a valid URL (for example, https://example.com).');
             } else {
-                this.classList.remove('error-field');
-                const errorMsg = this.parentNode.querySelector('.error-message');
-                if (errorMsg) errorMsg.remove();
+                clearFieldError(this);
             }
         });
     });
+
+    function showFieldError(field, message) {
+        clearFieldError(field);
+
+        const errorId = `${field.id}-error`;
+        const errorMessage = document.createElement('div');
+        errorMessage.id = errorId;
+        errorMessage.className = 'error-message';
+        errorMessage.textContent = message;
+
+        field.classList.add('error-field');
+        field.setAttribute('aria-invalid', 'true');
+        field.setAttribute('aria-describedby', errorId);
+        field.closest('.form-group').appendChild(errorMessage);
+    }
+
+    function clearFieldError(field) {
+        field.classList.remove('error-field');
+        field.removeAttribute('aria-invalid');
+
+        const errorId = `${field.id}-error`;
+        if (field.getAttribute('aria-describedby') === errorId) {
+            field.removeAttribute('aria-describedby');
+        }
+
+        document.getElementById(errorId)?.remove();
+    }
 
     function isValidUrl(string) {
         try {
@@ -315,6 +358,23 @@ permalink: /2027-artist-app/
             return false;
         }
     }
+
+    // Reveal the optional community field only when "Another community" is selected
+    const diversityOtherCheckbox = document.getElementById('diversity-another-racialized-community');
+    const diversityOtherField = document.getElementById('diversity-other-field');
+    const diversityOtherDetails = document.getElementById('diversity-other-details');
+
+    function toggleDiversityOtherField() {
+        const showField = diversityOtherCheckbox.checked;
+        diversityOtherField.hidden = !showField;
+        diversityOtherDetails.disabled = !showField;
+
+        if (!showField) {
+            diversityOtherDetails.value = '';
+        }
+    }
+
+    diversityOtherCheckbox.addEventListener('change', toggleDiversityOtherField);
 
     // Reveal the optional identity field only when "Other" is selected
     const lgbtqOtherCheckbox = document.getElementById('lgbtq-other');
@@ -333,29 +393,8 @@ permalink: /2027-artist-app/
 
     lgbtqOtherCheckbox.addEventListener('change', toggleLgbtqOtherField);
     document.getElementById('unreal-city-form').addEventListener('reset', function() {
+        setTimeout(toggleDiversityOtherField, 0);
         setTimeout(toggleLgbtqOtherField, 0);
-    });
-
-    // "None" and "Prefer not to answer" cannot be combined with other selections.
-    const diversityCheckboxes = Array.from(document.querySelectorAll('input[name="diversity"]'));
-    const exclusiveDiversityValues = ['None of the above', 'Prefer not to answer'];
-
-    diversityCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            if (!this.checked) return;
-
-            if (exclusiveDiversityValues.includes(this.value)) {
-                diversityCheckboxes.forEach(otherCheckbox => {
-                    if (otherCheckbox !== this) otherCheckbox.checked = false;
-                });
-            } else {
-                diversityCheckboxes.forEach(otherCheckbox => {
-                    if (exclusiveDiversityValues.includes(otherCheckbox.value)) {
-                        otherCheckbox.checked = false;
-                    }
-                });
-            }
-        });
     });
 
 </script>

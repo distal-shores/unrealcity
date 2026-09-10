@@ -735,7 +735,7 @@ footer.site-footer {
 .form-status.error {
   background-color: $form-error-bg;
   color: $form-error-text;
-  border: $form-error-border;
+  border: 1px solid $form-error-border;
 }
 
 .form-status.loading {
@@ -744,13 +744,14 @@ footer.site-footer {
   border: $form-status-loading-border;
 }
 
-.error-field {
+.form-group .error-field {
   border-color: $form-error-text;
 }
 
 .error-message {
-  color: $secondary;
+  color: $form-error-text;
   font-size: 14px;
+  font-weight: 600;
   margin-top: 5px;
 }
 
