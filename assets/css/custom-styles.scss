@@ -552,7 +552,7 @@ footer.site-footer {
 // Form styles
 
 .form-title {
-  font-family: "amatic-sc", sans-serif;
+  font-family: "cc-thismanthismonster-var", sans-serif;
   color: $teal;
   margin-bottom: 24px;
 }
@@ -571,7 +571,7 @@ footer.site-footer {
   font-family: "source-sans-pro", sans-serif;
   margin-bottom: 8px;
   font-weight: 700;
-  color: $offwhite;
+  color: $black;
   font-size: 20px;
 }
 
@@ -629,8 +629,48 @@ footer.site-footer {
   line-height: 1.5;
 }
 
+.multi-select-group {
+  padding: 0;
+  border: 0;
+}
+
+.multi-select-group legend {
+  margin-bottom: 8px;
+  font-family: "source-sans-pro", sans-serif;
+  color: $black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.multi-select-group .checkbox-group {
+  margin: 6px 0;
+}
+
+.multi-select-group span.small {
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.multi-select-group .multi-select-instructions {
+  margin: 0 0 12px;
+}
+
+.conditional-text-field {
+  margin: 10px 0 0 32px;
+  max-width: 480px;
+}
+
+.conditional-text-field[hidden] {
+  display: none;
+}
+
+.conditional-text-field label {
+  font-size: 16px;
+}
+
 .optional {
-  color: $offwhite;
+  color: $black;
   font-weight: normal;
   font-style: italic;
   font-size: 16px;
@@ -642,8 +682,7 @@ footer.site-footer {
 
 .section-divider {
   border-top: 2px solid $offwhite;
-  margin: 40px 0 30px 0;
-  padding-top: 20px;
+  margin: 0 0 30px 0;
 }
 
 .section-note {

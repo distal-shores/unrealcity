@@ -1,10 +1,361 @@
 ---
 layout: default
 title: Unreal City 2026 Application Form
-permalink: /2026-submit/
+permalink: /2027-submit/
 ---
 
 <div class="form-container">
-    <h2>Thank you for your interest</h2>
-    <div>Applications for Unreal City 2026 are now closed. Please check back next year!</div>
+    <h1 class="form-title">Unreal City 2027 Application Form</h1>
+    <p>Unreal City 2026 takes place February 25-27 at Russian Hall in K'emk'emeláy/Vancouver.</p>
+    <p class="coral">Submissions close October 14, 2026.</p>
+
+    <form id="unreal-city-form">
+        <div class="form-group">
+            <label for="bandName">Artist name <span class="required">*</span></label>
+            <input type="text" id="bandName" name="bandName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contactEmail">Contact email <span class="required">*</span></label>
+            <input type="email" id="contactEmail" name="contactEmail" required>
+        </div>
+
+        <div class="form-group large-textarea">
+            <label for="bandMembers">Artist members + roles <span class="required">*</span></label>
+            <textarea id="bandMembers" name="bandMembers" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location <span class="optional">(indicate state/country if not in Canada)</span> <span class="required">*</span></label>
+            <input type="text" id="location" name="location" required>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website">
+        </div>
+
+        <div class="form-group">
+            <label for="spotify">Spotify (or other streaming service)</label>
+            <input type="url" id="spotify" name="spotify">
+        </div>
+
+        <div class="form-group">
+            <label for="bandcamp">Bandcamp</label>
+            <input type="url" id="bandcamp" name="bandcamp">
+        </div>
+
+        <div class="form-group">
+            <label for="instagram">Instagram</label>
+            <input type="url" id="instagram" name="instagram">
+        </div>
+
+        <div class="form-group">
+            <label for="tiktok">TikTok</label>
+            <input type="url" id="tiktok" name="tiktok">
+        </div>
+
+        <div class="form-group">
+            <label for="similarBands">Up to 3 other bands you (or other people) think you sound like</label>
+            <input type="text" id="similarBands" name="similarBands">
+        </div>
+
+        <div class="form-group">
+            <label for="songLink1">Song link 1<br></label>
+            <input type="url" id="songLink1" name="songLink1">
+            <span class="small">If your music is on a major streaming platform as indicated above, you don't need to fill this field out.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="songLink2">Song link 2<br></label>
+            <input type="url" id="songLink2" name="songLink2">
+            <span class="small">If your music is on a major streaming platform as indicated above, you don't need to fill this field out.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="liveVideo">Link to a live performance video</label>
+            <input type="url" id="liveVideo" name="liveVideo">
+        </div>
+
+        <div class="form-group">
+            <label for="recentOrUpcomingvideo">Does your band have a recently released or upcoming music video?</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="recentOrUpcomingvideo" name="recentOrUpcomingvideo">
+                <label for="recentOrUpcomingvideo">Yes</label>
+            </div>
+            <span class="small">Note: the above question is for our planning purposes only, if your application is successful you will have a chance to share it with us later. This question will not factor into our programming decision-making.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="pressLink1">Link to your favourite piece of press your band has received</label>
+            <input type="url" id="pressLink1" name="pressLink1">
+        </div>
+
+        <div class="section-divider">
+            <div class="section-note">
+                We will use the information in the following two questions to ensure representation and diversity in the festival lineup:
+            </div>
+        </div>
+
+        <fieldset class="form-group multi-select-group">
+            <legend>Do any members of your group identify with any of the following communities?</legend>
+            <span class="small multi-select-instructions"><em>Select all that apply. This information is optional and helps us support diversity in our programming.</em></span>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-black" name="diversity" value="Black">
+                <label for="diversity-black">Black</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-indigenous" name="diversity" value="Indigenous">
+                <label for="diversity-indigenous">Indigenous</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-east-asian" name="diversity" value="East Asian">
+                <label for="diversity-east-asian">East Asian</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-south-asian" name="diversity" value="South Asian">
+                <label for="diversity-south-asian">South Asian</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-southeast-asian" name="diversity" value="Southeast Asian">
+                <label for="diversity-southeast-asian">Southeast Asian</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-middle-eastern-west-asian" name="diversity" value="Middle Eastern / West Asian">
+                <label for="diversity-middle-eastern-west-asian">Middle Eastern / West Asian</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-latin-american" name="diversity" value="Latin American">
+                <label for="diversity-latin-american">Latin American</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-another-racialized-community" name="diversity" value="Another racialized community">
+                <label for="diversity-another-racialized-community">Another racialized community</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-none" name="diversity" value="None of the above">
+                <label for="diversity-none">None of the above</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="diversity-prefer-not-to-answer" name="diversity" value="Prefer not to answer">
+                <label for="diversity-prefer-not-to-answer">Prefer not to answer</label>
+            </div>
+            <span class="small"><em>Select all that apply.</em></span>
+        </fieldset>
+
+        <fieldset class="form-group multi-select-group">
+            <legend>Do you or any members of your group identify with any of the following?</legend>
+            <span class="small multi-select-instructions"><em>Select all that apply. This information is optional and helps us support diversity in our programming.</em></span>
+            <div class="checkbox-group">
+                <input type="checkbox" id="lgbtq-queer" name="lgbtq" value="LGBTQ+ / Queer">
+                <label for="lgbtq-queer">LGBTQ+ / Queer</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="lgbtq-transgender" name="lgbtq" value="Transgender">
+                <label for="lgbtq-transgender">Transgender</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="lgbtq-non-binary" name="lgbtq" value="Non-binary / gender-diverse">
+                <label for="lgbtq-non-binary">Non-binary / gender-diverse</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="lgbtq-two-spirit" name="lgbtq" value="Two-Spirit">
+                <label for="lgbtq-two-spirit">Two-Spirit</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="lgbtq-other" name="lgbtq" value="Other">
+                <label for="lgbtq-other">Other (tell us more about how members of your project identify, if you want)</label>
+            </div>
+            <div id="lgbtq-other-field" class="conditional-text-field" hidden>
+                <label for="lgbtq-other-details">Tell us more <span class="optional">(optional)</span></label>
+                <input type="text" id="lgbtq-other-details" name="lgbtqOther" disabled>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+        <div id="form-status" class="form-status" style="display: none;"></div>
+    </form>
 </div>
+
+<script>
+    document.getElementById('unreal-city-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Clear previous errors
+        document.querySelectorAll('.error-field').forEach(field => {
+            field.classList.remove('error-field');
+        });
+        document.querySelectorAll('.error-message').forEach(msg => {
+            msg.remove();
+        });
+
+        const formData = new FormData(this);
+        const data = {};
+        const diversitySelections = formData.getAll('diversity');
+        const lgbtqSelections = formData.getAll('lgbtq');
+        const lgbtqOtherDetails = (formData.get('lgbtqOther') || '').trim();
+
+        // Convert FormData to object
+        for (let [key, value] of formData.entries()) {
+            if (key === 'recentOrUpcomingvideo') {
+                data[key] = true; // checkbox is checked if present
+            } else if (key === 'diversity' || key === 'lgbtq' || key === 'lgbtqOther') {
+                continue; // handled below so all selected values are retained
+            } else {
+                data[key] = value.trim();
+            }
+        }
+
+        data.diversity = diversitySelections.join(', ');
+        data.lgbtq = lgbtqSelections
+            .map(value => value === 'Other' && lgbtqOtherDetails ? `Other: ${lgbtqOtherDetails}` : value)
+            .join(', ');
+
+        // Always send an explicit boolean for the music video question
+        if (!data.recentOrUpcomingvideo) {
+            data.recentOrUpcomingvideo = false;
+        }
+
+        const statusDiv = document.getElementById('form-status');
+        const submitBtn = document.querySelector('.submit-btn');
+
+        // Song links are only required when no streaming-service link is supplied.
+        const missingSongLinks = data.spotify || data.bandcamp
+            ? []
+            : ['songLink1', 'songLink2'].filter(fieldName => !data[fieldName]);
+
+        if (missingSongLinks.length > 0) {
+            missingSongLinks.forEach(fieldName => {
+                document.getElementById(fieldName).classList.add('error-field');
+            });
+            statusDiv.textContent = 'Please provide both song links, or add a Spotify, Bandcamp, or other streaming-service link.';
+            statusDiv.className = 'form-status error';
+            statusDiv.style.display = 'block';
+            document.getElementById(missingSongLinks[0]).focus();
+            return;
+        }
+
+        // Show loading state
+        statusDiv.innerHTML = 'Submitting your application...';
+        statusDiv.className = 'form-status loading';
+        statusDiv.style.display = 'block';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch('https://uc-form-handler.vercel.app/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                statusDiv.textContent = `✅ ${result.message} Thank you for applying to Unreal City 2027!`;
+                statusDiv.className = 'form-status success';
+                this.reset(); // Clear the form
+            } else {
+                // Handle validation errors
+                if (result.message && result.message.includes('Missing required fields')) {
+                    statusDiv.textContent = `❌ ${result.message}`;
+                    statusDiv.className = 'form-status error';
+
+                    // Highlight missing fields
+                    const missingFields = result.missingFields || ['bandName', 'contactEmail', 'bandMembers', 'location'];
+                    missingFields.forEach(fieldName => {
+                        const field = document.getElementById(fieldName);
+                        if (field && (!data[fieldName] || data[fieldName] === '')) {
+                            field.classList.add('error-field');
+                        }
+                    });
+                } else {
+                    statusDiv.textContent = `❌ ${result.message || 'Error submitting application'}`;
+                    statusDiv.className = 'form-status error';
+                }
+            }
+        } catch (error) {
+            statusDiv.textContent = `❌ Network Error: Unable to submit application. Please check your connection and try again.`;
+            statusDiv.className = 'form-status error';
+            console.error('Submission error:', error);
+        } finally {
+            submitBtn.disabled = false;
+        }
+    });
+
+    // Real-time validation for URL fields
+    document.querySelectorAll('input[type="url"]').forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.value && !isValidUrl(this.value)) {
+                this.classList.add('error-field');
+
+                // Remove existing error message
+                const existingError = this.parentNode.querySelector('.error-message');
+                if (existingError) existingError.remove();
+
+                // Add error message
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'error-message';
+                errorMsg.textContent = 'Please enter a valid URL (e.g., https://example.com)';
+                this.parentNode.appendChild(errorMsg);
+            } else {
+                this.classList.remove('error-field');
+                const errorMsg = this.parentNode.querySelector('.error-message');
+                if (errorMsg) errorMsg.remove();
+            }
+        });
+    });
+
+    function isValidUrl(string) {
+        try {
+            new URL(string);
+            return true;
+        } catch (_) {
+            return false;
+        }
+    }
+
+    // Reveal the optional identity field only when "Other" is selected
+    const lgbtqOtherCheckbox = document.getElementById('lgbtq-other');
+    const lgbtqOtherField = document.getElementById('lgbtq-other-field');
+    const lgbtqOtherDetails = document.getElementById('lgbtq-other-details');
+
+    function toggleLgbtqOtherField() {
+        const showField = lgbtqOtherCheckbox.checked;
+        lgbtqOtherField.hidden = !showField;
+        lgbtqOtherDetails.disabled = !showField;
+
+        if (!showField) {
+            lgbtqOtherDetails.value = '';
+        }
+    }
+
+    lgbtqOtherCheckbox.addEventListener('change', toggleLgbtqOtherField);
+    document.getElementById('unreal-city-form').addEventListener('reset', function() {
+        setTimeout(toggleLgbtqOtherField, 0);
+    });
+
+    // "None" and "Prefer not to answer" cannot be combined with other selections.
+    const diversityCheckboxes = Array.from(document.querySelectorAll('input[name="diversity"]'));
+    const exclusiveDiversityValues = ['None of the above', 'Prefer not to answer'];
+
+    diversityCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (!this.checked) return;
+
+            if (exclusiveDiversityValues.includes(this.value)) {
+                diversityCheckboxes.forEach(otherCheckbox => {
+                    if (otherCheckbox !== this) otherCheckbox.checked = false;
+                });
+            } else {
+                diversityCheckboxes.forEach(otherCheckbox => {
+                    if (exclusiveDiversityValues.includes(otherCheckbox.value)) {
+                        otherCheckbox.checked = false;
+                    }
+                });
+            }
+        });
+    });
+
+</script>
