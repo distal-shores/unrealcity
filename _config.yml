@@ -26,6 +26,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://unrealcity.rocks" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: unrealcityfest
 spotify_username:  31mvisvboc2cmkihrnclk5w7vdrq
+tiktok_username: unrealcityfest
+youtube_username: unrealcityfest
 
 # Build settings
 theme: minima
