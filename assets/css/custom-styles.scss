@@ -158,6 +158,11 @@ footer.site-footer {
   border-bottom: 3px solid $teal;
   border-top: 6px solid $teal;
 
+  // The banner supplies the teal strip; extra border shifts its visual center.
+  &:has(.sitewide-banner) {
+    border-top: 0;
+  }
+
   .logo {
     width: 200px;
   }
@@ -537,7 +542,7 @@ footer.site-footer {
     margin-bottom: 0;
     font-weight: 700;
     text-align: center;
-    padding: 5px;
+    padding: 8px 5px;
   }
   a {
     color: black;

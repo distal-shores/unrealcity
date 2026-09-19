@@ -5,6 +5,6 @@
 layout: page
 ---
 
-<a href="https://tickets.unrealcity.rocks" alt="Link to buy tickets for Unreal City Music Festival">
-    <img id="fest_poster" src="{{ '/assets/img/poster2026.jpg' | relative_url }}">
+<a href="https://gigpit.ca/shows/event:2eY-_PvdUWo" alt="Link to buy tickets for Unreal City Music Festival Fundraiser Nov 6 at the Astoria">
+    <img id="fest_poster" src="{{ '/assets/img/posterNov2026.jpg' | relative_url }}">
 </a>
