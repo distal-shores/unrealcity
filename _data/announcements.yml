@@ -1,0 +1,11 @@
+# Announcements appear in this order. Each needs text, link_text, and url.
+# Optional expires: YYYY-MM-DD keeps a message through that date.
+# Expiry is evaluated when Jekyll builds; rebuild the site to retire expired messages.
+- text: "Join us for our November 6 Fundraiser at the Astoria! 4 great local bands, 1 great cause."
+  link_text: Tickets
+  url: https://gigpit.ca/shows/event:2eY-_PvdUWo
+  expires: "2026-11-06"
+- text: "Pub Quiz Fundraiser Extravaganza — November 13!"
+  link_text: Tickets
+  url: https://tickets.unrealcity.rocks/events/unrealcitymusicfestival1/2479863/share/1f4ef83f83098e9f16413c95cd408084
+  expires: "2026-11-13"

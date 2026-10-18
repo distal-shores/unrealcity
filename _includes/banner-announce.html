@@ -1,3 +1,22 @@
-<div class="sitewide-banner">
-    <p><a href="https://gigpit.ca/shows/event:2eY-_PvdUWo" alt="Link to tickets for UC2027 Fundraiser">Join us</a> for our November 6 Fundraiser at the Astoria! 4 great local bands, 1 great cause. <a href="https://gigpit.ca/shows/event:2eY-_PvdUWo" alt="Link to tickets for UC2027 Fundraiser">Ticket Link</a></p>
-</div>
+{% assign today = site.time | date: '%Y-%m-%d' %}
+{% assign announcement_count = 0 %}
+{% capture announcement_slides %}
+    {% for announcement in site.data.announcements %}
+        {% if announcement.expires %}
+            {% assign expiry = announcement.expires | date: '%Y-%m-%d' %}
+            {% if expiry < today %}{% continue %}{% endif %}
+        {% endif %}
+        {% assign announcement_count = announcement_count | plus: 1 %}
+        <p class="announcement-slide{% if announcement_count == 1 %} is-active{% endif %}"{% unless announcement_count == 1 %} aria-hidden="true" inert{% endunless %}>
+            {{ announcement.text | escape }}
+            <a href="{{ announcement.url | relative_url | escape }}">{{ announcement.link_text | escape }}</a>
+        </p>
+    {% endfor %}
+{% endcapture %}
+{% if announcement_count > 0 %}
+<section class="sitewide-banner" aria-label="Announcements" data-announcements>
+    <div class="announcement-inner">
+        <div class="announcement-slides">{{ announcement_slides }}</div>
+    </div>
+</section>
+{% endif %}

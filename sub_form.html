@@ -4,7 +4,7 @@ title: Unreal City 2027 Application Form
 permalink: /2027-artist-app/
 ---
 
-<p>Thanks for your interest, 2027 applications are now closed!</p>
+<p>Thanks for your interest! 2027 applications are now closed.</p>
 
 <!--<div class="form-container">-->
 <!--    <h1 class="form-title">Unreal City 2027 Application Form</h1>-->
@@ -177,7 +177,7 @@ permalink: /2027-artist-app/
 <!--        </fieldset>-->
 
 <!--        <button type="submit" class="submit-btn">Submit Application</button>-->
-<!--        <div id="form-status" class="form-status" style="display: none;"></div>-->
+<!--        <div id="form-status" class="form-status" role="status" style="display: none;"></div>-->
 <!--    </form>-->
 <!--</div>-->
 
@@ -192,6 +192,7 @@ permalink: /2027-artist-app/
 
 <!--        const statusDiv = document.getElementById('form-status');-->
 <!--        const submitBtn = document.querySelector('.submit-btn');-->
+<!--        let applicationsClosed = false;-->
 <!--        statusDiv.style.display = 'none';-->
 
 <!--        const invalidFields = [];-->
@@ -282,7 +283,11 @@ permalink: /2027-artist-app/
 
 <!--            const result = await response.json();-->
 
-<!--            if (response.ok) {-->
+<!--            if (result.code === 'APPLICATIONS_CLOSED') {-->
+<!--                applicationsClosed = true;-->
+<!--                statusDiv.textContent = result.message;-->
+<!--                statusDiv.className = 'form-status';-->
+<!--            } else if (response.ok) {-->
 <!--                statusDiv.textContent = `✅ ${result.message} Thank you for applying to Unreal City 2027!`;-->
 <!--                statusDiv.className = 'form-status success';-->
 <!--                this.reset(); // Clear the form-->
@@ -310,7 +315,7 @@ permalink: /2027-artist-app/
 <!--            statusDiv.className = 'form-status error';-->
 <!--            console.error('Submission error:', error);-->
 <!--        } finally {-->
-<!--            submitBtn.disabled = false;-->
+<!--            submitBtn.disabled = applicationsClosed;-->
 <!--        }-->
 <!--    });-->
 

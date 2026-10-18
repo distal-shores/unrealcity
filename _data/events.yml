@@ -1,0 +1,14 @@
+# Add one entry per event with a title, date (YYYY-MM-DD), poster image, and ticket URL.
+# Optional location is displayed below the event date.
+# The Tickets page sorts entries by date, earliest first, and keeps past events.
+# Use a site-relative image path under /assets/img/ or a full HTTPS image URL.
+- title: November 6 Fundraiser feat. Good For It, Rainbows End, Semi, softhead
+  date: "2026-11-06"
+  location: Astoria Pub
+  image: /assets/img/posters/posterNov2026.jpg
+  url: https://gigpit.ca/shows/event:2eY-_PvdUWo
+- title: Pub Quiz Fundraiser Extravaganza
+  date: "2026-11-13"
+  location: "Meraloma Club, 2390 W 10th Ave"
+  image: /assets/img/posters/quizPosterNov2026.jpg
+  url: https://tickets.unrealcity.rocks/events/unrealcitymusicfestival1/2479863/share/1f4ef83f83098e9f16413c95cd408084

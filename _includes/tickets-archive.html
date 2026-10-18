@@ -1,0 +1,33 @@
+{% assign events = site.data.events | sort: 'date' %}
+<div class="tickets-archive">
+    {% for event in events %}
+    {% assign event_date = event.date | date: '%B %-d, %Y' %}
+    {% assign event_title = event.title | default: event_date %}
+    <article class="ticket-event" aria-labelledby="ticket-event-{{ forloop.index }}">
+        <a class="ticket-event-row" href="{{ event.url | escape }}" aria-labelledby="ticket-event-{{ forloop.index }} ticket-date-{{ forloop.index }} ticket-link-{{ forloop.index }}"{% if event.location and event.location != '' %} aria-describedby="ticket-location-{{ forloop.index }}"{% endif %}>
+            <img class="ticket-event-poster" src="{{ event.image | relative_url | escape }}"
+                 alt="{{ event_title | escape }} poster"
+                 {% unless forloop.first %}loading="lazy"{% endunless %}
+                 decoding="async">
+            <div class="ticket-event-details">
+                <h2 class="ticket-event-title" id="ticket-event-{{ forloop.index }}">{{ event_title | escape }}</h2>
+                <p class="ticket-event-date" id="ticket-date-{{ forloop.index }}">
+                    <time datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event_date }}</time>
+                </p>
+                {% if event.location and event.location != '' %}
+                <p class="ticket-event-location" id="ticket-location-{{ forloop.index }}">
+                    <svg class="ticket-location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>{{ event.location | escape }}</span>
+                </p>
+                {% endif %}
+                <span class="ticket-event-link" id="ticket-link-{{ forloop.index }}">Tickets &rarr;</span>
+            </div>
+        </a>
+    </article>
+    {% else %}
+    <p>There are no events listed yet. Check back soon for tickets.</p>
+    {% endfor %}
+</div>

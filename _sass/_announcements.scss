@@ -1,0 +1,56 @@
+.announcement-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+
+.announcement-slides {
+  display: grid;
+  min-width: 0;
+  perspective: 800px;
+}
+
+.announcement-slide {
+  // All messages occupy one grid cell, reserving space for the tallest.
+  grid-area: 1 / 1;
+  align-self: center;
+  visibility: hidden;
+  pointer-events: none;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+
+  &.is-active {
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &.is-entering {
+    animation: announcement-flip 380ms ease-out;
+  }
+
+  a,
+  a:visited {
+    color: $black;
+    font-weight: 700;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+}
+
+.sitewide-banner :focus-visible {
+  outline: 2px solid $black;
+  outline-offset: 2px;
+}
+
+@keyframes announcement-flip {
+  from { opacity: 0; transform: rotateX(-70deg); }
+  to { opacity: 1; transform: rotateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement-slide.is-entering {
+    animation: none;
+  }
+}

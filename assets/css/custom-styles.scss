@@ -534,25 +534,9 @@ footer.site-footer {
 .sitewide-banner {
   background-color: $secondary;
   min-height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  p {
-    color: black;
-    margin-bottom: 0;
-    font-weight: 700;
-    text-align: center;
-    padding: 8px 5px;
-  }
-  a {
-    color: black;
-    font-weight: 700;
-    text-decoration: underline;
-    &:visited {
-      color: black;
-    }
-  }
 }
+
+@import "announcements";
 
 // Form styles
 
@@ -782,4 +766,5 @@ footer.site-footer {
 }
 
 @import "press";
+@import "tickets";
 @import "newsletter-signup";
